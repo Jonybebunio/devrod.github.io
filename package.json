@@ -1,7 +1,7 @@
 {
   "name": "devrod",
   "private": true,
-  "homepage": "http://devrod.site",
+  "homepage": "https://devrod.site",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
