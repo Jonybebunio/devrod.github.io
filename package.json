@@ -5,7 +5,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy":"npm run build && echo jonybebunio.github.io/devrod.github.io > ./dist/CNAME",
+    "predeploy":"npm run build && echo devrod.site > ./dist/CNAME",
     "deploy":"gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
