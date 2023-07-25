@@ -22,86 +22,89 @@ import galeria from '../src/assets/galeria.png';
 
 function Services() {
   const servicios = [
-    {
-      nombre: "Sitio web básico",
-      descripcion: "Diseño y desarrollo de un sitio web estático con información básica de la empresa.Es adecuado para varios tipos de negocios, especialmente aquellos que no necesitan actualizaciones frecuentes de contenido y funcionalidades",
-      imagen: estatic
-    },
-    {
-      nombre: "Sitio web dinámico",
-      descripcion: "Desarrollo de un sitio web interactivo con funcionalidades como formularios de contacto y comentarios de usuarios.",
-      imagen: dinamic
-    },
-    {
-      nombre: "Tienda en línea",
-      descripcion: "Diseño y desarrollo de una plataforma de comercio electrónico para vender productos en línea.",
-      imagen: ecommerce
-    },
-    // El resto de los servicios se considerarán aplicaciones adicionales
-    // y se agregarán en la siguiente lista
-  ];
-
-  const aplicacionesAdicionales = [
-    {
-      nombre: "Appicaciones de reparto",
-      descripcion: "Aplicacion de reparto a domicilio, recibe directamente la orden por mensajes de tus clientes ",
-      imagen: delivery
-    },
-    {
-      nombre: "Sitio web responsive",
-      descripcion: "Adaptación del diseño y desarrollo del sitio web para que se vea y funcione correctamente en dispositivos móviles.",
-      imagen: responsive
-    },
-    {
-      nombre: "Sitio web optimizado",
-      descripcion: "Optimización del rendimiento y velocidad del sitio web para una mejor experiencia del usuario.",
-      imagen: optimo
-    },
-    {
-      nombre: "Desarrollo de aplicaciones móviles",
-      descripcion: "Creación de aplicaciones móviles para iOS y Android, utilizando tecnologías como React Native o Flutter.",
-      imagen: android
-    },
-    { 
-      nombre: "Sitios web multilingües",
-      descripcion: "Desarrollo de sitios web con soporte para múltiples idiomas, permitiendo llegar a audiencias internacionales.",
-      imagen: languages
-    },
-    { 
-      nombre: "Integración de pago en línea",
-      descripcion: "Implementación de pasarelas de pago en sitios web y tiendas en línea para aceptar pagos en línea de forma segura.",
-      imagen: payment
-    },
-    { 
-      nombre: "Asistente Virtual",
-      descripcion: "Integración de un sistema de chat automatizado en el sitio web para brindar atención al cliente en tiempo real.",
-      imagen: chatbot
-    },
-    { 
-      nombre: "Calendario de eventos",
-      descripcion: "Inclusión de un calendario interactivo en el sitio web para mostrar eventos, fechas importantes o disponibilidad.",
-      imagen: calander
-    },
-    { 
-      nombre: "Formularios avanzados",
-      descripcion: "Creación de formularios personalizados con validaciones, campos dinámicos y funcionalidades avanzadas.",
-      imagen: form
-    },
-    { 
-      nombre: "Galería de imágenes",
-      descripcion: "Integración de una galería de imágenes en el sitio web para mostrar una colección de fotos o trabajos.",
-      imagen: galeria
-    },
-    { 
-      nombre: "Sistema de reservas",
-      descripcion: "Implementación de un sistema de reservas en línea para que los usuarios puedan programar citas o hacer reservas.",
-      imagen: reserve
-    },
-    { 
-      nombre: "Integración de redes sociales",
-      descripcion: "Conexión del sitio web con las redes sociales para compartir contenido y fomentar la interacción con los usuarios.",
-      imagen: social
-    }
+    
+      {
+        nombre: "SITIO WEB BÁSICO",
+        descripcion: "Diseño y desarrollo de un sitio web estático con información básica de la empresa. Es adecuado para varios tipos de negocios, especialmente aquellos que no necesitan actualizaciones frecuentes de contenido y funcionalidades.",
+        imagen: estatic
+      },
+      {
+        nombre: "SITIO WEB DINÁMICO",
+        descripcion: "Desarrollo de un sitio web interactivo con funcionalidades como formularios de contacto y comentarios de usuarios.",
+        imagen: dinamic
+      },
+      {
+        nombre: "TIENDA EN LÍNEA",
+        descripcion: "Diseño y desarrollo de una plataforma de comercio electrónico para vender productos en línea.",
+        imagen: ecommerce
+      },
+      // El resto de los servicios se considerarán aplicaciones adicionales
+      // y se agregarán en la siguiente lista
+    ];
+    
+    const aplicacionesAdicionales = [
+      {
+        nombre: "APLICACIONES DE REPARTO",
+        descripcion: "Aplicación de reparto a domicilio, recibe directamente la orden por mensajes de tus clientes.",
+        imagen: delivery
+      },
+      {
+        nombre: "SITIO WEB RESPONSIVO",
+        descripcion: "Adaptación del diseño y desarrollo del sitio web para que se vea y funcione correctamente en dispositivos móviles.",
+        imagen: responsive
+      },
+      {
+        nombre: "SITIO WEB OPTIMIZADO",
+        descripcion: "Optimización del rendimiento y velocidad del sitio web para una mejor experiencia del usuario.",
+        imagen: optimo
+      },
+      {
+        nombre: "DESARROLLO DE APLICACIONES MÓVILES",
+        descripcion: "Creación de aplicaciones móviles para iOS y Android, utilizando tecnologías como React Native o Flutter.",
+        imagen: android
+      },
+      { 
+        nombre: "SITIO WEB MULTILINGÜE",
+        descripcion: "Desarrollo de sitios web con soporte para múltiples idiomas, permitiendo llegar a audiencias internacionales.",
+        imagen: languages
+      },
+      { 
+        nombre: "INTEGRACIÓN DE PAGO EN LÍNEA",
+        descripcion: "Implementación de pasarelas de pago en sitios web y tiendas en línea para aceptar pagos en línea de forma segura.",
+        imagen: payment
+      },
+      { 
+        nombre: "ASISTENTE VIRTUAL",
+        descripcion: "Integración de un sistema de chat automatizado en el sitio web para brindar atención al cliente en tiempo real.",
+        imagen: chatbot
+      },
+      { 
+        nombre: "CALENDARIO DE EVENTOS",
+        descripcion: "Inclusión de un calendario interactivo en el sitio web para mostrar eventos, fechas importantes o disponibilidad.",
+        imagen: calander
+      },
+      { 
+        nombre: "FORMULARIOS AVANZADOS",
+        descripcion: "Creación de formularios personalizados con validaciones, campos dinámicos y funcionalidades avanzadas.",
+        imagen: form
+      },
+      { 
+        nombre: "GALERÍA DE IMÁGENES",
+        descripcion: "Integración de una galería de imágenes en el sitio web para mostrar una colección de fotos o trabajos.",
+        imagen: galeria
+      },
+      { 
+        nombre: "SISTEMA DE RESERVAS",
+        descripcion: "Implementación de un sistema de reservas en línea para que los usuarios puedan programar citas o hacer reservas.",
+        imagen: reserve
+      },
+      { 
+        nombre: "INTEGRACIÓN DE REDES SOCIALES",
+        descripcion: "Conexión del sitio web con las redes sociales para compartir contenido y fomentar la interacción con los usuarios.",
+        imagen: social
+      }
+    
+    
   ];
   const [showAllApps, setShowAllApps] = useState(false);
   const initialAppsToShow = 3;

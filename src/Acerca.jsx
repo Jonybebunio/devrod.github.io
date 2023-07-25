@@ -18,11 +18,11 @@ function Acerca() {
       <div className="text-container" style={{ flex: '1', margin: '0 10px' }}>
         <h2>CONÓCENOS</h2>
         <br /><br />
-        <h3>Soluciones de diseño, no solo imágenes</h3>
+        <h3>Soluciones de diseño, no solo imágenes.</h3>
         <p>
           Nuestro equipo de UI/UX hacen que tu web luzca estupenda<br />
           y nuestros programadores hacen que tu web sea desarrollada<br />
-          con las últimas tecnologías en programación web
+          con las últimas tecnologías en programación web.
         </p>
         <h2>Piensa en grande, Piensa en DevRod!</h2>
       </div>
