@@ -25,12 +25,12 @@ function Services() {
     
       {
         nombre: "SITIO WEB BÁSICO",
-        descripcion: "Diseño y desarrollo de un sitio web estático con información básica de la empresa. Es adecuado para varios tipos de negocios, especialmente aquellos que no necesitan actualizaciones frecuentes de contenido y funcionalidades.",
+        descripcion: "Destaca con una web estática para mostrar información básica y permanente. Es adecuado para varios tipos de negocios.",
         imagen: estatic
       },
       {
         nombre: "SITIO WEB DINÁMICO",
-        descripcion: "Desarrollo de un sitio web interactivo con funcionalidades como formularios de contacto y comentarios de usuarios.",
+        descripcion: "Interactiva, inmersiva y personalizada. Impulsa tu negocio con una presencia web dinámica y conecta con tus clientes..",
         imagen: dinamic
       },
       {
@@ -135,35 +135,23 @@ function Services() {
             <p>{servicio.descripcion}</p>
             {index < 3 && (
               <>
-                <p>
-                  Adecuado para:
+                <p style={{fontSize:'40px'}}>
+                  Precios desde:
                 </p>
                 {index === 0 && (
-                  <ul>
-                    <li>Restaurantes y cafeterías</li>
-                    <li>Salones de belleza y peluquerías</li>
-                    <li>Talleres de reparación</li>
-                    <li>Eventos especiales (bodas, fiestas, conferencias)</li>
-                    <li>Otros</li>
-                  </ul>
+                  <h1 style={{fontSize:'40px'}}>
+                    € 499.00
+                  </h1>
                 )}
                 {index === 1 && (
-                  <ul>
-                    <li>Pequeñas Tiendas en línea (e-commerce).</li>
-                    <li>Plataformas de reservas (hoteles, restaurantes, etc.).</li>
-                    <li>Plataformas de educación en línea.</li>
-                    <li>Portales de empleo.</li>
-                    <li>Otros</li>                    
-                  </ul>
+                  <h1 style={{fontSize:'40px'}}>
+                    € 899.00                   
+                  </h1>
                 )}
                 {index === 2 && (
-                  <ul>
-                    <li>Tiendas Virutales</li>
-                    <li>Tienda de Libros Electronicos</li>
-                    <li>tienda de productos digitales</li>
-                    <li>plataforma de reservas</li>
-                    <li>Otros</li>                    
-                  </ul>
+                  <h1 style={{fontSize:'40px'}}>
+                    € 999.00              
+                  </h1>
                 )}
               </>
             )}

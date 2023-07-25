@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Forum', cursive;
   
 }
 
@@ -17,7 +18,7 @@ body {
   
 }
 
-.titlecenter{text-align: center; color:white}
+.titlecenter{text-align: center; color:white; font-size: 30px;}
 
 /* Estilos generales del header y el navbar */
 header {
@@ -172,6 +173,7 @@ footer p {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-family: 'Forum', cursive;
 }
 
 /* Estilo para cada elemento de servicio */
@@ -181,6 +183,7 @@ footer p {
   padding: 20px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Estilo para las imágenes de los servicios */
@@ -219,6 +222,7 @@ footer p {
   padding: 20px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
 }
 
 /* Estilo para el nombre del servicio */
@@ -229,7 +233,7 @@ footer p {
 
 /* Estilo para la descripción del servicio */
 .service-item p {
-  font-size: 14px;
+  font-size: 19px;
   color: #666;
   margin-bottom: 0;
 }
@@ -256,10 +260,10 @@ footer p {
 .main-service p {
   margin-bottom: 10px; /* Agrega espacio adicional después del párrafo */
 }
+/*
 
-.main-service ul {
-  text-align: left; /* Alinea la lista a la izquierda */
-}
+
+
 
 /* Estilos para el botón */
 .button-container {

@@ -2,6 +2,9 @@ import React from 'react';
 import '../src/index.css';
 import { Link } from 'react-scroll';
 import ImgV from '../src/assets/bg.mp4'; // Importa el video en lugar de la imagen
+import facebook from '../src/assets/fb.png'
+import gmail from '../src/assets/gmail.png'
+import whatsapp from '../src/assets/ws.png'
 
 function Face() {
   return (
@@ -35,21 +38,42 @@ function Face() {
         </video>
         <div style={{
           color: 'white',
-          fontSize: '20px',
+          fontSize: '40px',
           textAlign: 'left',
           padding: '20px',
-        }}>
-          <h1>Hola somos DevRod</h1><br />
+          fontFamily: 'Forum, cursive',
+        }}>          
           <p>
-            Potencia tu Presencia Digital con DevRod:<br/>
-            Desata el potencial de tus ideas a través de<br/>
+            Potencia tu Presencia Digital<br/> con DevRod:
+            Desata el potencial <br/>de tus ideas a través de<br/>
             soluciones web de vanguardia y<br/>
             desarrollo de aplicaciones a medida.
           </p>
+         
           <br/>
-          <br/>
-          TELEFONO: +34 644190529<br/>
-          CORREO ELECTRONICO: jonath.josue@gmail.com
+         
+          <a href="https://www.facebook.com/profile.php?id=100094913480501" target="_blank" rel="noopener noreferrer">
+              <img 
+                src={facebook} 
+                alt="facebook de devrod source by Icons8" 
+                style={{width:'70px',}}
+              />
+          </a>   
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=devrod.developers@gmail.com" target="_blank" rel="noopener noreferrer">
+              <img 
+                src={gmail} 
+                alt="gmail de devrod source by Icons8" 
+                style={{width:'70px',}}
+              />
+          </a>
+          <a href="https://wa.me/34644190529" target="_blank" rel="noopener noreferrer">
+              <img 
+                src={whatsapp} 
+                alt="whatsapp de devrod source by Icons8" 
+                style={{width:'70px',}}
+              />
+          </a>       
+          
         </div>
       </section>
     </>
