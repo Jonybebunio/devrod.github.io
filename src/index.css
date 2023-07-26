@@ -332,8 +332,7 @@ footer p {
 
 
 /*seccion acerca*/
-
-
+/* Estilos para la sección acerca */
 .about-section {
   display: flex;
   justify-content: space-between;
@@ -350,17 +349,22 @@ footer p {
   text-align: left;
 }
 
-/* Agrega cualquier otro estilo necesario para la sección acerca de tu sitio web */
 /* Estilos responsivos para pantallas pequeñas */
 @media screen and (max-width: 768px) {
-  
+  .about-section {
+    flex-direction: column;
+  }
 
-  .text-container, .image-container {
-    /* Ajustar estilos para los contenedores de texto e imagen en pantallas pequeñas */
-    width: 100%;
-    margin: 10px;
+  .text-container {
+    order: 1;
+  }
+
+  .image-container {
+    order: 2;
+    width: 80%;
   }
 }
+
 
 
 /* Estilos para el proceso */
@@ -479,5 +483,27 @@ footer p {
 }
 
 
-/*buton style*/
+/*face component*/
 
+/* Estilo base para las letras */
+
+
+.text-container-face {
+  color: white;
+  font-size: 40px;
+  text-align: left;  
+  font-family: 'Forum', cursive;
+  width: 50%;}
+
+
+/* Estilo para letras más pequeñas en pantallas de teléfono */
+@media screen and (max-width: 768px) {
+  .text-container-face {
+    font-size: 20px;
+    margin:0;
+    width:130% ;    
+  }
+  #inicio{
+    background-image: url("./assets/bg-6.jpeg");
+  }
+}
