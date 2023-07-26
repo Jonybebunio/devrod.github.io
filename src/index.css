@@ -499,7 +499,7 @@ footer p {
 /* Estilo para letras más pequeñas en pantallas de teléfono */
 @media screen and (max-width: 768px) {
   .text-container-face {
-    font-size: 20px;
+    font-size: 30px;
     margin:0;
     width:130% ;    
   }
