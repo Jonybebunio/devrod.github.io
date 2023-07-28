@@ -24,18 +24,53 @@ function Services() {
   const servicios = [
     
       {
-        nombre: "SITIO WEB BÁSICO",
-        descripcion: "Destaca con una web estática para mostrar información básica y permanente. Es adecuado para varios tipos de negocios.",
+        nombre: "BÁSICO",
+        descripcion:[
+          "Contenido fijo y preestablecido",
+          "No utiliza una base de datos",
+          "Rápido rendimiento y tiempos de carga",
+          "Fácil de alojar y bajo mantenimiento",
+          "Seguridad mejorada",
+          "Ideal para proyectos pequeños y de bajo presupuesto",
+          "Limitado a interacciones básicas",
+          "y actualización de contenido más técnica" 
+        ],
         imagen: estatic
       },
       {
-        nombre: "SITIO WEB DINÁMICO",
-        descripcion: "Interactiva, inmersiva y personalizada. Impulsa tu negocio con una presencia web dinámica y conecta con tus clientes..",
+        nombre: "DINÁMICO",
+        descripcion:["Contenido actualizable",
+                      "Interacción con usuarios"  ,    
+                      "Utiliza base de datos",      
+                      "Personalización del contenido",        
+                      "Integración con servicios externos " ,      
+                      "Diseño adaptable (Responsive)"        ,
+                      "Actualización en tiempo real"        ,
+                      "Funcionalidades avanzadas "       ,
+                      "Mayor complejidad",
+                      "Escalabilidad"
+                    ], 
         imagen: dinamic
       },
       {
         nombre: "TIENDA EN LÍNEA",
-        descripcion: "Diseño y desarrollo de una plataforma de comercio electrónico para vender productos en línea.",
+        descripcion:[
+                      "Catálogo de productos",
+                      "Carrito de compras"    ,    
+                      "Pasarela de pago segura",        
+                      "Gestión de inventario"   ,    
+                      "Cuentas de usuario"  ,
+                      "Valoraciones y reseñas de productos" ,       
+                      "Proceso de compra sencillo"        ,
+                      "Seguimiento de pedidos"        ,
+                      "Seguridad y privacidad"        ,
+                      "Soporte al cliente"        ,
+                      "Diseño responsive"        ,
+                      "Promociones y descuentos"  ,      
+                      "Funciones de búsqueda y filtrado",        
+                      "Informes y análisis.",
+                    ]       ,
+
         imagen: ecommerce
       },
       // El resto de los servicios se considerarán aplicaciones adicionales
@@ -126,39 +161,45 @@ function Services() {
       <br/><br/>
       <h3 className='titlecenter'>SERVICIOS PRINCIPALES</h3>
       <br/><br/>
+
+
       <ul className="services-list">
-        {/* Código para mostrar los servicios principales */}
         {servicios.map((servicio, index) => (
           <li key={index} className={`service-item ${index < 3 ? 'main-service' : ''}`}>
-            <h3>{servicio.nombre}</h3>
-            <img src={servicio.imagen} alt={servicio.nombre} />
-            <p>{servicio.descripcion}</p>
+            <h3><strong>{servicio.nombre}</strong></h3>
+            {/* ... (imagen del servicio) */}
             {index < 3 && (
-              <>
-                <p style={{fontSize:'40px'}}>
-                  Precios desde:
-                </p>
-                {index === 0 && (
-                  <h1 style={{fontSize:'40px'}}>
-                    € 499.00
-                  </h1>
-                )}
-                {index === 1 && (
-                  <h1 style={{fontSize:'40px'}}>
-                    € 899.00                   
-                  </h1>
-                )}
-                {index === 2 && (
-                  <h1 style={{fontSize:'40px'}}>
-                    € 999.00              
-                  </h1>
-                )}
-              </>
-            )}
+  <>
+    {index === 0 && (
+      <h1 style={{ fontSize: '40px', color: 'white' }}>
+        Desde € 499.00
+      </h1>
+    )}
+    {index === 1 && (
+      <h1 style={{ fontSize: '40px', color: 'white' }}>
+        Desde € 899.00
+      </h1>
+    )}
+    {index === 2 && (
+      <h1 style={{ fontSize: '40px', color: 'white' }}>
+        Desde € 999.00
+      </h1>
+    )}
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <ul style={{ textAlign: 'left', listStyle: 'none', color: 'white', padding: 0, margin: 0 }}>
+        {servicio.descripcion.map((item, i) => (
+          <li key={i}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  </>
+)}
           </li>
         ))}
       </ul>
-                  <br/><br/><br/>
+
+
+      <br/><br/><br/>
       <h3 className='titlecenter'>APLICACIONES ADICIONALES</h3>
       <br/>
       <ul className="services-list">
@@ -183,5 +224,6 @@ function Services() {
     </section>
   );
 }
+
 
 export default Services

@@ -19,7 +19,7 @@ function App() {
        //   backgroundImage: `url(${Img})`,
        //   background: '#5f9ea0',
        //   backgroundPosition: 'center',        
-          background: 'linear-gradient(to right, #0b3d94, #281541)', // Aplica el gradiente como una cadena    
+          background: 'white', // Aplica el gradiente como una cadena    
           margin: '0', // Eliminar el margen
           padding: '0', // Eliminar el relleno
           

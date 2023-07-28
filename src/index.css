@@ -163,6 +163,7 @@ footer p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  
 }
 
 /* Estilo para las listas de servicios */
@@ -174,6 +175,7 @@ footer p {
   padding: 0;
   margin: 0;
   font-family: 'Forum', cursive;
+  
 }
 
 /* Estilo para cada elemento de servicio */
@@ -183,7 +185,8 @@ footer p {
   padding: 20px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
+  background-image: url(./assets/bg7.jpeg);
+  background-size: 100%;
 }
 
 /* Estilo para las imágenes de los servicios */
@@ -227,8 +230,9 @@ footer p {
 
 /* Estilo para el nombre del servicio */
 .service-item h3 {
-  font-size: 20px;
+  font-size: 30px;
   margin-bottom: 10px;
+  color:white;
 }
 
 /* Estilo para la descripción del servicio */
@@ -489,7 +493,7 @@ footer p {
 
 
 .text-container-face {
-  color: white;
+  padding-top: 45px;
   font-size: 40px;
   text-align: left;  
   font-family: 'Forum', cursive;

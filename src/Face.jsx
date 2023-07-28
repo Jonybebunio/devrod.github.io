@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../src/index.css';
 import { Link } from 'react-scroll';
-import ImgV from '../src/assets/bg.mp4';
+import ImgV from '../src/assets/bg1.mp4';
 import facebook from '../src/assets/fb.png';
 import gmail from '../src/assets/gmail.png';
 import whatsapp from '../src/assets/ws.png';
