@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from '../src/Header';
 import Face from '../src/Face';
 import Services from '../src/Services';
@@ -11,10 +11,20 @@ import Footer from '../src/Footer';
 import '../src/index.css';
 
 function App() {
+
+  const [showContactForm, setShowContactForm] = useState(false);
+  const [language, setLanguage] = useState('es');
+
+  const changeLanguage = (lang) => {
+    setLanguage(lang);
+  };
+
   return (
     <div className="App">
-      <Header />
-      <Face />
+      <Header 
+        showContactForm={showContactForm} setShowContactForm={setShowContactForm}
+        language={language} changeLanguage={changeLanguage} />
+      <Face  language={language}/>
       <section style={{
        //   backgroundImage: `url(${Img})`,
        //   background: '#5f9ea0',
@@ -24,18 +34,18 @@ function App() {
           padding: '0', // Eliminar el relleno
           
         }}>
-        <Services />
+        <Services language={language} />
       </section>
       <section >
-        <Acerca />
+        <Acerca  language={language}/>
       </section>
       <section style={{background: 'linear-gradient(to right, #0b3d94, #281541)',}} >
-        <Process />
+        <Process  language={language} />
       </section>
       
-      <Portfolio />
+      <Portfolio  language={language}/>
       <section style={{background: 'linear-gradient(to right, #0b3d94, #281541)',}} >
-        <Contact />
+        <Contact showContactForm={showContactForm} setShowContactForm={setShowContactForm} language={language}/>
       </section>
         
       

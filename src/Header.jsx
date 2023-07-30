@@ -3,15 +3,20 @@ import { Link } from 'react-scroll';
 import Logo from '../src/assets/Logo.png';
 import '../src/index.css';
 
-function Header() {
+function Header(props) {
+  const { language, changeLanguage, showContactForm, setShowContactForm  } = props;
   const [showMenu, setShowMenu] = useState(false);
 
   const handleMenuClick = () => {
     setShowMenu(!showMenu);
   };
 
-  // Agregamos una función para cerrar el menú al hacer clic en un enlace
   const handleLinkClick = () => {
+    setShowMenu(false);
+  };
+
+  const handleContactLinkClick = () => {
+    setShowContactForm(true);
     setShowMenu(false);
   };
 
@@ -26,10 +31,26 @@ function Header() {
         </div>
         <div className={`navbar-right ${showMenu ? 'active' : ''}`}>
           <ul className="menu">
-            <li><Link to="inicio" smooth={true} duration={500} onClick={handleLinkClick}>Inicio</Link></li>
-            <li><Link to="services" smooth={true} duration={500} onClick={handleLinkClick}>Servicios</Link></li>
-            <li><Link to="portfolio" smooth={true} duration={500} onClick={handleLinkClick}>Portafolio</Link></li>
-            <li><Link to="contact" smooth={true} duration={500} onClick={handleLinkClick}>Contacto</Link></li>
+            <li><Link to="inicio" smooth={true} duration={500} onClick={handleLinkClick}>
+              {language === 'es' && 'Inicio'}
+              {language === 'en' && 'Home'}
+              {language === 'pl' && 'Strona główna'}
+            </Link></li>
+            <li><Link to="services" smooth={true} duration={500} onClick={handleLinkClick}>
+              {language === 'es' && 'Servicios'}
+              {language === 'en' && 'Services'}
+              {language === 'pl' && 'Usługi'}
+            </Link></li>
+            <li><Link to="portfolio" smooth={true} duration={500} onClick={handleLinkClick}>
+              {language === 'es' && 'Portafolio'}
+              {language === 'en' && 'Portfolio'}
+              {language === 'pl' && 'Portfolio'}
+            </Link></li>
+            <li><Link to="contact" smooth={true} duration={500} onClick={handleContactLinkClick}>
+              {language === 'es' && 'Contacto'}
+              {language === 'en' && 'Contact'}
+              {language === 'pl' && 'Kontakt'}
+            </Link></li>
           </ul>
         </div>
         <div className={`hamburger ${showMenu ? 'active' : ''}`} onClick={handleMenuClick}>
@@ -38,6 +59,11 @@ function Header() {
           <span className="line"></span>
         </div>
       </nav>
+      <div className="language-buttons">
+        <button onClick={() => changeLanguage('es')}>ES</button>
+        <button onClick={() => changeLanguage('en')}>EN</button>
+        <button onClick={() => changeLanguage('pl')}>PL</button>
+      </div>
     </header>
   );
 }
