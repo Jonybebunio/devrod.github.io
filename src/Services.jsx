@@ -375,7 +375,7 @@ function Services(props) {
               <>
                 {index === 0 && (
                   <h1 style={{ fontSize: '40px', color: 'white' }}>
-                    <s>Desde € 499.00</s>
+                    <s>Desde € 499.00</s><br/>
                     Agosto desde € 399.00
                   </h1>
                 )}
