@@ -5,6 +5,7 @@ import Proyecto1 from '../src/assets/restaurante.png';
 import Proyecto2 from '../src/assets/ong.png';
 import Proyecto3 from '../src/assets/music.png';
 import Proyecto4 from '../src/assets/chatbot.jpg';
+import Proyecto5 from '../src/assets/menu.jpg';
 import '../src/index.css';
 
 function Portfolio({ language, changeLanguage }) {
@@ -89,6 +90,27 @@ function Portfolio({ language, changeLanguage }) {
         pl: ['ChatBot'],
       },
     },
+    {
+      image: Proyecto5, // Reemplaza 'Ruta-de-la-imagen' con la ruta de la imagen del proyecto
+      name: 'Menú del Restaurante',
+      link: 'https://64c89a31986e8d3f9adf0b23--gleeful-bubblegum-0aa06c.netlify.app/', // Reemplaza 'https://www.ejemplo.com/menudelrestaurante' con el enlace a tu menú del restaurante
+      description: {
+          es: 'Menú completo del restaurante con una amplia selección de platos deliciosos.',
+          en: 'Complete restaurant menu with a wide selection of delicious dishes.',
+          pl: 'Pełne menu restauracyjne z szerokim wyborem pysznych dań.',
+      },
+      platform: {
+          es: 'HTML, CSS y JavaScript',
+          en: 'HTML, CSS, and JavaScript',
+          pl: 'HTML, CSS i JavaScript',
+      },
+      apps: {
+          es: ['Menú del Restaurante'],
+          en: ['Restaurant Menu'],
+          pl: ['Menu Restauracji'],
+      },
+  }
+  
     // Agrega más proyectos aquí con sus respectivas imágenes, enlaces, descripciones, plataforma y aplicaciones
   ];
 
