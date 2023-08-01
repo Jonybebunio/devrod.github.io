@@ -4,7 +4,7 @@ import Logo from '../src/assets/Logo.png';
 import '../src/index.css';
 
 function Header(props) {
-  const { language, changeLanguage, showContactForm, setShowContactForm  } = props;
+  const { language, changeLanguage, showContactForm, setShowContactForm } = props;
   const [showMenu, setShowMenu] = useState(false);
 
   const handleMenuClick = () => {
