@@ -362,7 +362,26 @@ function Services(props) {
   return (
     <section id="services" className="services-section">
       <Link to="services" smooth={true} duration={500}></Link>
-      <h2 className="titlecenter">{traducciones[language].mainServices}</h2>
+
+      <h2>Páginas Web Impactantes: Diseños web que no solo son hermosos,
+      sino que también funcionan a la perfección. Creamos sitios que
+      hablan por tu marca y cautivan a tus visitantes desde el primer clic.
+      </h2>
+
+      <h2>
+      Programas Web a la Medida: Ideas transformadas en programas potentes. 
+      Desde aplicaciones interactivas hasta soluciones empresariales, creamos
+      programas web que hacen que tu negocio avance.
+      </h2>
+
+      <h2>
+      Actualización Web Sin Complicaciones: Mantén tu presencia en 
+      línea fresca y actualizada. Con nuestra ayuda, evolucionar 
+      tu sitio web es tan sencillo como inspirador.
+      </h2>
+      <br/><br/><br/>
+
+      <h2 className="titlecenter" style={{color:"black"}}>{traducciones[language].mainServices}</h2>
       <br />
       <br />
 
@@ -405,7 +424,7 @@ function Services(props) {
       <br />
       <br />
       <br />
-      <h3 className="titlecenter">{traducciones[language].additionalApps}</h3>
+      <h3 className="titlecenter" style={{color:"black"}}>{traducciones[language].additionalApps}</h3>
       <br />
       <ul className="services-list">
         {visibleApps.map((servicio, index) => (

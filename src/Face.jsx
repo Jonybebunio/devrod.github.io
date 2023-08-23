@@ -11,7 +11,7 @@ function Face(props) {
   const [typedText, setTypedText] = useState('');
 
   const originalText = {
-    es: "Potencia tu Presencia Digital con DevRod: Desata el potencial de tus ideas a través de soluciones web de vanguardia y desarrollo de aplicaciones a medida.",
+    es: "Bienvenido a Devrod: Donde las Ideas Se Convierten en Éxito en Línea En Devrod, somos los artesanos digitales que transforman tu visión en sitios y programas web que deslumbran. Ya sea que necesites una página web cautivadora o un programa web innovador, estamos aquí para hacer realidad tus ambiciones digitales.",
     en: "Empower your Digital Presence with DevRod: Unleash the potential of your ideas through cutting-edge web solutions and custom application development.",
     pl: "Wzmocnij swoją obecność cyfrową z DevRod: Uwalniaj potencjał swoich pomysłów poprzez nowoczesne rozwiązania internetowe i tworzenie niestandardowych aplikacji."
   };
@@ -25,7 +25,7 @@ function Face(props) {
       } else {
         clearInterval(typingInterval);
       }
-    }, 50);
+    }, 2);
 
     return () => {
       clearInterval(typingInterval);
@@ -63,7 +63,7 @@ function Face(props) {
           <source src={ImgV} type="video/mp4" />
         </video>
         <div className="text-container-face">
-          <p>{typedText}</p>
+          <p style={{fontSize:"25px",}}>{typedText}</p>
           <br/>
           <a href="https://www.facebook.com/profile.php?id=100094913480501" target="_blank" rel="noopener noreferrer">
             <img 

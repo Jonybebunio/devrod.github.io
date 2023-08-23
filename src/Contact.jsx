@@ -4,6 +4,7 @@ import '../src/index.css';
 import facebook from '../src/assets/fb.png';
 import gmail from '../src/assets/gmail.png';
 import whatsapp from '../src/assets/ws.png';
+import att from '../src/assets/att.png';
 
 function Contact({ language, changeLanguage, showContactForm, setShowContactForm }) {
   const [formData, setFormData] = useState({
@@ -96,18 +97,27 @@ function Contact({ language, changeLanguage, showContactForm, setShowContactForm
   return (
     <>
       <button
-        style={{
-          position: 'fixed',
-          bottom: '40px',
-          right: '40px',
-          zIndex: '9999',
-          height: '40px',
-          fontSize: '30px',
-        }}
-        onClick={toggleContact}
-      >
-        {traducciones[language].buttonText}
-      </button>
+  style={{
+    position: 'fixed',
+    bottom: '40px',
+    right: '40px',
+    zIndex: '9999',
+    height: '40px',
+    fontSize: '30px',
+    background: 'transparent',  // Elimina el fondo del botón
+    border: 'none',            // Elimina el borde del botón
+    cursor: 'pointer',
+    padding: '0',              // Elimina el espacio interior del botón
+  }}
+  onClick={toggleContact}
+>
+  <img
+    src={att}// Reemplaza "ruta-a-tu-imagen.png" con la ruta correcta de tu imagen
+    alt="Contact"
+    style={{ width: '40px', height: '40px' }}  // Ajusta el tamaño de la imagen según tus necesidades
+  />
+</button>
+
 
       {showContactForm && (
         <section

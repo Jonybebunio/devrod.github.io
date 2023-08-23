@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import Header from '../src/Header';
 import Face from '../src/Face';
 import Services from '../src/Services';
@@ -7,6 +9,8 @@ import Process from '../src/Process';
 import Portfolio from '../src/Portfolio';
 import Contact from '../src/Contact';
 import Footer from '../src/Footer';
+import Blog from '../src/Blog';
+import Layout from '../src/Layout';
 
 import '../src/index.css';
 
@@ -20,37 +24,44 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <Header 
-        showContactForm={showContactForm} setShowContactForm={setShowContactForm}
-        language={language} changeLanguage={changeLanguage} />
-      <Face  language={language}/>
-      <section style={{
-       //   backgroundImage: `url(${Img})`,
-       //   background: '#5f9ea0',
-       //   backgroundPosition: 'center',        
-          background: 'white', // Aplica el gradiente como una cadena    
-          margin: '0', // Eliminar el margen
-          padding: '0', // Eliminar el relleno
-          
-        }}>
-        <Services language={language} />
-      </section>
-      <section >
-        <Acerca  language={language}/>
-      </section>
-      <section style={{background: 'linear-gradient(to right, #0b3d94, #281541)',}} >
-        <Process  language={language} />
-      </section>
-      
-      <Portfolio  language={language}/>
-      <section style={{background: 'linear-gradient(to right, #0b3d94, #281541)',}} >
-        <Contact showContactForm={showContactForm} setShowContactForm={setShowContactForm} language={language}/>
-      </section>
-        
-      
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Header 
+          showContactForm={showContactForm} setShowContactForm={setShowContactForm}
+          language={language} changeLanguage={changeLanguage} />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Face language={language} />
+              <section style={{
+                //   backgroundImage: `url(${Img})`,
+                //   background: '#5f9ea0',
+                //   backgroundPosition: 'center',        
+                background: 'white', // Aplica el gradiente como una cadena    
+                margin: '0', // Eliminar el margen
+                padding: '0', // Eliminar el relleno
+                
+              }}>
+                <Services language={language} />
+              </section>
+              <section >
+                <Acerca language={language} />
+              </section>
+              <section style={{background: 'linear-gradient(to right, #0b3d94, #281541)',}} >
+                <Process language={language} />
+              </section>
+              <Portfolio language={language} />
+              <section style={{background: 'linear-gradient(to right, #0b3d94, #281541)',}} >
+                <Contact showContactForm={showContactForm} setShowContactForm={setShowContactForm} language={language}/>
+              </section>
+            </>
+          } />
+         
+         <Route path="/blog" element={<Layout showContactForm={showContactForm} setShowContactForm={setShowContactForm} language={language} changeLanguage={changeLanguage} showAllLinks={false} />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
