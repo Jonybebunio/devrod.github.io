@@ -25,13 +25,13 @@ function Services(props) {
   const traducciones = {
     es: {
       mainServices: 'SERVICIOS PRINCIPALES',
-      additionalApps: 'APLICACIONES ADICIONALES',
+      additionalApps: 'INTEGRA LO QUE TU NEGOCIO NECESITA',
       showLess: 'Mostrar menos',
       showMore: 'Mostrar más',
     },
     en: {
       mainServices: 'MAIN SERVICES',
-      additionalApps: 'ADDITIONAL APPLICATIONS',
+      additionalApps: 'GET WHAT YOUR BUSINESS NEEDS',
       showLess: 'Show less',
       showMore: 'Show more',
     },

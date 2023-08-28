@@ -69,21 +69,21 @@ function Face(props) {
             <img 
               src={facebook} 
               alt={language === 'es' ? "facebook de devrod source by Icons8" : language === 'en' ? "Devrod's Facebook source by Icons8" : "Devrod's Facebook źródło przez Icons8"}
-              style={{ width: '70px' }}
+              style={{ width: '40px' }}
             />
           </a>   
           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=devrod.developers@gmail.com" target="_blank" rel="noopener noreferrer">
             <img 
               src={gmail} 
               alt={language === 'es' ? "gmail de devrod source by Icons8" : language === 'en' ? "Devrod's Gmail source by Icons8" : "Devrod's Gmail źródło przez Icons8"}
-              style={{ width: '70px' }}
+              style={{ width: '40px' }}
             />
           </a>
           <a href="https://wa.me/34644190529" target="_blank" rel="noopener noreferrer">
             <img 
               src={whatsapp} 
               alt={language === 'es' ? "whatsapp de devrod source by Icons8" : language === 'en' ? "Devrod's Whatsapp source by Icons8" : "Devrod's Whatsapp źródło przez Icons8"}
-              style={{ width: '70px' }}
+              style={{ width: '40px' }}
             />
           </a>       
         </div>

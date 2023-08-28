@@ -137,7 +137,14 @@ function Portfolio({ language, changeLanguage }) {
         {projectData.map((project, index) => (
           <div key={index} className="portfolio-card">
             <a href={project.link} target="_blank" rel="noopener noreferrer">
-              <img src={project.image} alt={project.name} />
+              <div className="card-image">
+                <img src={project.image} alt={project.name} />
+                <div className="image-overlay">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    Ver proyecto
+                  </a>
+                </div>
+              </div>
             </a>
             <h3>{project.name}</h3>
             <p>{project.description[language]}</p>
@@ -155,4 +162,6 @@ function Portfolio({ language, changeLanguage }) {
   );
 }
 
+
 export default Portfolio;
+/*punto de partida*/
