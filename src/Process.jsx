@@ -58,17 +58,45 @@ function Process({ language }) {
       subtitle: 'OUR WORKING PROCESS',
       cards: [
         {
-          nombre: 'Website Planning',
-          descripcion: 'Description of the website planning process.',
+          nombre: 'Idea and Planning',
+          descripcion: 'Define the purpose and audience of your site.',
         },
         {
-          nombre: 'Website Design',
-          descripcion: 'Description of the website design process.',
+          nombre: 'Design',
+          descripcion: 'Create a visual design and navigation structure.',
         },
         {
-          nombre: 'Website Online',
-          descripcion: 'Description of the process of putting the website online.',
+          nombre: 'Front-End Development',
+          descripcion: 'Code the design with HTML, CSS, and possibly JavaScript.',
         },
+        {
+          nombre: 'Back-End Development',
+          descripcion: 'Add advanced functionalities if necessary.',
+        },
+        {
+          nombre: 'Testing',
+          descripcion: 'Verify and test all parts of your site.',
+        },
+        {
+          nombre: 'Add Content',
+          descripcion: 'Insert images, text, and other elements.',
+        },
+        {
+          nombre: 'Optimize',
+          descripcion: 'Improve performance and SEO of your site.',
+        },
+        {
+          nombre: 'Registration and Hosting',
+          descripcion: 'Choose a domain name and a hosting provider.',
+        },
+        {
+          nombre: 'Upload and Launch',
+          descripcion: 'Upload files to the server and verify everything.',
+        },
+        {
+          nombre: 'Maintenance',
+          descripcion: 'Perform updates and adjustments regularly.',
+        }
         
       ],
     },
@@ -77,17 +105,46 @@ function Process({ language }) {
       subtitle: 'NASZY PROCES PRACY',
       cards: [
         {
-          nombre: 'Planowanie Strony',
-          descripcion: 'Opis procesu planowania strony internetowej.',
+          nombre: 'Idea i Planowanie',
+          descripcion: 'Zdefiniuj cel i grupę docelową swojej strony.',
         },
         {
-          nombre: 'Projektowanie Strony',
-          descripcion: 'Opis procesu projektowania strony internetowej.',
+          nombre: 'Projektowanie',
+          descripcion: 'Stwórz projekt wizualny oraz strukturę nawigacji.',
         },
         {
-          nombre: 'Strona na Żywo',
-          descripcion: 'Opis procesu umieszczania strony internetowej w sieci.',
+          nombre: 'Tworzenie Front-Endu',
+          descripcion: 'Zakoduj projekt za pomocą HTML, CSS i ewentualnie JavaScriptu.',
         },
+        {
+          nombre: 'Tworzenie Back-Endu',
+          descripcion: 'Dodaj zaawansowane funkcje, jeśli to konieczne.',
+        },
+        {
+          nombre: 'Testowanie',
+          descripcion: 'Zweryfikuj i przetestuj wszystkie części swojej strony.',
+        },
+        {
+          nombre: 'Dodawanie Zawartości',
+          descripcion: 'Wstaw obrazy, tekst i inne elementy.',
+        },
+        {
+          nombre: 'Optymalizacja',
+          descripcion: 'Popraw wydajność i pozycjonowanie SEO swojej strony.',
+        },
+        {
+          nombre: 'Rejestracja i Hosting',
+          descripcion: 'Wybierz nazwę domeny i dostawcę hostingu.',
+        },
+        {
+          nombre: 'Przesyłanie i Uruchamianie',
+          descripcion: 'Prześlij pliki na serwer i zweryfikuj wszystko.',
+        },
+        {
+          nombre: 'Utrzymanie',
+          descripcion: 'Regularnie dokonuj aktualizacji i dostosowań.',
+        }
+        
       ],
     },
   };

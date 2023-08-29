@@ -28,18 +28,30 @@ function Services(props) {
       additionalApps: 'INTEGRA LO QUE TU NEGOCIO NECESITA',
       showLess: 'Mostrar menos',
       showMore: 'Mostrar más',
+      stunningWebsites: 'Páginas Web Impactantes: Diseños web que no solo son hermosos, sino que también funcionan a la perfección. Creamos sitios que hablan por tu marca y cautivan a tus visitantes desde el primer clic.',
+      customWebApps: 'Programas Web a la Medida: Ideas transformadas en programas potentes. Desde aplicaciones interactivas hasta soluciones empresariales, creamos programas web que hacen que tu negocio avance.',
+      seamlessUpdates: 'Actualización Web Sin Complicaciones: Mantén tu presencia en línea fresca y actualizada. Con nuestra ayuda, evolucionar tu sitio web es tan sencillo como inspirador.',
+  
     },
     en: {
       mainServices: 'MAIN SERVICES',
       additionalApps: 'GET WHAT YOUR BUSINESS NEEDS',
       showLess: 'Show less',
       showMore: 'Show more',
+      stunningWebsites: 'Stunning Websites: Web designs that are not only beautiful but also function perfectly. We create sites that speak for your brand and captivate your visitors from the first click.',
+      customWebApps: 'Custom Web Programs: Ideas transformed into powerful programs. From interactive applications to business solutions, we create web programs that drive your business forward.',
+      seamlessUpdates: 'Seamless Web Updates: Keep your online presence fresh and updated. With our help, evolving your website is as easy as it is inspiring.',
+
     },
     pl: {
       mainServices: 'USŁUGI GŁÓWNE',
-      additionalApps: 'DODATKOWE APLIKACJE',
+      additionalApps: 'Zintegruj To, Czego Potrzebuje Twoja Firma',
       showLess: 'Pokaż mniej',
       showMore: 'Pokaż więcej',
+      stunningWebsites: 'Zachwycające strony internetowe: Projektowanie stron internetowych, które są nie tylko piękne, ale również działają doskonale. Tworzymy strony, które mówią za twoją markę i zachwycają od pierwszego kliknięcia.',
+      customWebApps: 'Niestandardowe programy internetowe: Pomysły przekształcone w potężne programy. Od interaktywnych aplikacji po rozwiązania biznesowe, tworzymy programy internetowe, które napędzają twój biznes do przodu.',
+      seamlessUpdates: 'Bezproblemowe aktualizacje witryny: Utrzymaj świeżość i aktualność swojej obecności online. Dzięki naszej pomocy, rozwijanie swojej witryny jest równie łatwe, co inspirujące.',
+
     },
   };
 
@@ -363,22 +375,11 @@ function Services(props) {
     <section id="services" className="services-section">
       <Link to="services" smooth={true} duration={500}></Link>
 
-      <h2>Páginas Web Impactantes: Diseños web que no solo son hermosos,
-      sino que también funcionan a la perfección. Creamos sitios que
-      hablan por tu marca y cautivan a tus visitantes desde el primer clic.
-      </h2>
+      <h2>{traducciones[language].stunningWebsites}</h2>
 
-      <h2>
-      Programas Web a la Medida: Ideas transformadas en programas potentes. 
-      Desde aplicaciones interactivas hasta soluciones empresariales, creamos
-      programas web que hacen que tu negocio avance.
-      </h2>
+      <h2>{traducciones[language].customWebApps}</h2>
 
-      <h2>
-      Actualización Web Sin Complicaciones: Mantén tu presencia en 
-      línea fresca y actualizada. Con nuestra ayuda, evolucionar 
-      tu sitio web es tan sencillo como inspirador.
-      </h2>
+      <h2>{traducciones[language].seamlessUpdates}</h2>
       <br/><br/><br/>
 
       <h2 className="titlecenter" style={{color:"black"}}>{traducciones[language].mainServices}</h2>

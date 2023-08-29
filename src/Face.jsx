@@ -12,8 +12,8 @@ function Face(props) {
 
   const originalText = {
     es: "Bienvenido a Devrod: Donde las Ideas Se Convierten en Éxito en Línea En Devrod, somos los artesanos digitales que transforman tu visión en sitios y programas web que deslumbran. Ya sea que necesites una página web cautivadora o un programa web innovador, estamos aquí para hacer realidad tus ambiciones digitales.",
-    en: "Empower your Digital Presence with DevRod: Unleash the potential of your ideas through cutting-edge web solutions and custom application development.",
-    pl: "Wzmocnij swoją obecność cyfrową z DevRod: Uwalniaj potencjał swoich pomysłów poprzez nowoczesne rozwiązania internetowe i tworzenie niestandardowych aplikacji."
+    en: "Welcome to Devrod: Where Ideas Turn into Online Success At Devrod, we are the digital craftsmen who turn your vision into dazzling websites and web programs. Whether you need a captivating webpage or an innovative web program, we're here to bring your digital ambitions to life",
+    pl: "Witaj w Devrod: Gdzie Pomysły Przemieniają Się w Sukces Online W Devrodzie jesteśmy cyfrowymi rzemieślnikami, którzy zamieniają Twoją wizję w olśniewające strony internetowe i programy internetowe. Bez względu na to, czy potrzebujesz fascynującej strony internetowej, czy innowacyjnego programu internetowego, jesteśmy tutaj, aby ożywić Twoje cyfrowe ambicje."
   };
 
   useEffect(() => {

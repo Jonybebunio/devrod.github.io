@@ -81,19 +81,96 @@ function Acerca({ language }) {
     },
     en: {
       title: 'ABOUT US',
-      subtitle: 'Design solutions, not just images.',
-      paragraph: `Our UI/UX team makes your website look great,
-                  and our programmers develop your website
-                  with the latest web programming technologies.`,
-      additionalTitle: 'Think big, Think DevRod!',
+      subtitle: 'Design Solutions, Not Just Images.',
+
+      paragraph: `
+      At DevRod, we're dedicated to bringing your technological visions to life.
+      We're a team of passionate experts in development and design, committed
+      to creating exceptional digital solutions that exceed your expectations.`,
+
+      subtitle01: 'Our Unique Approach',
+      paragraph01:`
+      At DevRod, we blend creativity and technical expertise
+      to develop innovative software and websites.
+      We believe in the power of technology to transform the world,
+      and our approach reflects that belief in every project we undertake.`,
+
+      subtitle02: 'Values Driving Our Success',
+      paragraph02:`      
+      Our success is built on strong values. Excellence, creativity,
+      and attention to detail are the cornerstones of everything we do.
+      Our commitment to quality is reflected in every line of code and every
+      carefully crafted design.`,
+
+      subtitle03: 'Experience and Passion',
+      paragraph03:`      
+      With an experienced team in software development and web design,
+      we've worked on a variety of challenging projects.
+      Our passion for technology and innovation drives us to continue
+      pushing our limits and delivering top-notch solutions.`,
+
+      subtitle04: 'Our Commitment',
+      paragraph04:`      
+      At DevRod, we don't just build software programs and websites,
+      but also strong and lasting relationships.
+      We're here to be your reliable technology partner, working together
+      to turn your ideas into digital reality.`,
+
+      subtitle05: 'Join Our Story',
+      paragraph05:`      
+      We invite you to be a part of the DevRod story.
+      If you're looking for digital solutions that make a difference,
+      we're here to listen, collaborate with you,
+      and take your projects to the next level.`,
+      additionalTitle: 'Think Big, Think DevRod!',
+
     },
     pl: {
-      title: 'O NAS',
-      subtitle: 'Rozwiązania projektowe, nie tylko obrazy.',
-      paragraph: `Nasz zespół UI/UX sprawia, że Twoja strona internetowa prezentuje się świetnie,
-                  a nasi programiści tworzą ją z wykorzystaniem najnowszych technologii
-                  w zakresie programowania stron internetowych.`,
-      additionalTitle: 'Myśl wielko, Myśl DevRod!',
+      title: 'POZNAJ NAS',
+      subtitle: 'Rozwiązania Projektowe, Nie Tylko Obrazy.',
+
+      paragraph: `
+      W DevRod jesteśmy dedykowani ożywianiu Twoich technologicznych wizji.
+      Jesteśmy zespołem pasjonatów ekspertów w dziedzinie rozwoju i projektowania,
+      zaangażowanych w tworzenie wyjątkowych rozwiązań cyfrowych,
+      które przekraczają Twoje oczekiwania.`,
+
+      subtitle01: 'Nasze Unikalne Podejście',
+      paragraph01:`
+      W DevRod łączymy kreatywność i doświadczenie techniczne,
+      aby rozwijać innowacyjne oprogramowanie i strony internetowe.
+      Wierzymy w moc technologii w przekształcaniu świata,
+      a nasze podejście odzwierciedla tę wiarę w każdym projekcie, który podejmujemy.`,
+
+      subtitle02: 'Wartości Kształtujące Nasz Sukces',
+      paragraph02:`      
+      Nasz sukces opiera się na solidnych wartościach. Doskonałość, kreatywność
+      i dbałość o szczegóły są fundamentami wszystkiego, co robimy.
+      Nasze zaangażowanie w jakość odzwierciedla się w każdej linii kodu
+      i każdym starannie wykonanym projekcie.`,
+
+      subtitle03: 'Doświadczenie i Pasja',
+      paragraph03:`      
+      Dzięki doświadczonemu zespołowi w dziedzinie rozwoju oprogramowania i projektowania stron internetowych,
+      pracowaliśmy nad różnorodnymi projektami wymagającymi wyzwania.
+      Nasza pasja do technologii i innowacji napędza nas do nieustannego
+      przekraczania własnych ograniczeń i dostarczania najwyższej jakości rozwiązań.`,
+
+      subtitle04: 'Nasze Zaangażowanie',
+      paragraph04:`      
+      W DevRod nie tylko tworzymy programy i strony internetowe,
+      ale także trwałe i silne relacje.
+      Jesteśmy tutaj, aby być Twoim niezawodnym partnerem technologicznym,
+      pracując razem, aby zamienić Twoje pomysły w cyfrową rzeczywistość.`,
+
+      subtitle05: 'Dołącz do Naszej Historii',
+      paragraph05:`      
+      Zapraszamy Cię do wzięcia udziału w historii DevRod.
+      Jeśli szukasz rozwiązań cyfrowych, które robią różnicę,
+      jesteśmy tutaj, aby wysłuchać, współpracować z Tobą
+      i podnieść Twoje projekty na wyższy poziom.`,
+      additionalTitle: 'Mysląc Wielko, Myśl DevRod!',
+
     },
   };
 
