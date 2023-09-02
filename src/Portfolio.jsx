@@ -13,7 +13,7 @@ function Portfolio({ language, changeLanguage }) {
     {
       image: Proyecto1,
       name: 'La Casa del Frances.',
-      link: 'https://64b6ad2bbf143410c4a8949f--fastidious-pavlova-ec199a.netlify.app/?fbclid=IwAR1z4GgA1ObYoSyPmdE1ao4pcyCAUmlVnP2YbzeNYnck-axMeT_yHffP8nI',
+      link: 'https://lacasadeburger.es',
       description: {
         es: 'Este proyecto es un restaurante que ofrece servicios a domicilio.',
         en: 'This project is a restaurant that offers home delivery services.',
