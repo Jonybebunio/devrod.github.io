@@ -126,15 +126,18 @@ function Contact({ language, changeLanguage, showContactForm, setShowContactForm
           style={{
             position: 'fixed',
             top: '50%',
-            left: '65%',
+            left: '50%',
             transform: 'translate(-50%, -50%)',
             zIndex: '9999',
+            background: "#04414F",
+            borderRadius:"16px"
+            
           }}
         >
           <h2 className="titlecenter">{traducciones[language].title}</h2>
           <Link to="contact" smooth={true} duration={500}></Link>
-          <form style={{ background: 'blue', padding: '25px' }}>
-            <label>
+          <form style={{ background: '#04414F', padding: '60px', borderRadius:"16px" }}>
+            <label> 
               {traducciones[language].nameLabel}
               <input type="text" name="name" required onChange={handleChange} />
             </label>

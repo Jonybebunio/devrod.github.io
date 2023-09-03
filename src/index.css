@@ -123,12 +123,10 @@ header {
   }
 }
 
-
 /* Estilos para la navegación móvil */
 @media screen and (max-width: 768px) {
   .navbar-center {
-    display: none; /* Cambia display a none por defecto */
-    
+    display: none; /* Cambia display a none por defecto */    
     flex-direction: column;
     align-items: center;
     background-color: #ffffff;
@@ -140,10 +138,8 @@ header {
     /* Asegúrate de que la altura sea suficiente */
     height: 200px; /* Ajusta según sea necesario */
   }
-  .navbar-center.active { 
-    
-    
-    display: flex; /* Cambia display a flex cuando esté activo */
+  .navbar-center.active {   
+        display: flex; /* Cambia display a flex cuando esté activo */
   }
 
   .navbar-center .menu li {
@@ -173,7 +169,8 @@ footer p {
   margin: 0;
 }
 
-/*services*/
+
+/*-------SERVICES-------------------------------------------------------------------*/
 /* Estilo base para los servicios */
 .services-section {
   max-width: 1200px;
@@ -200,8 +197,7 @@ footer p {
   border-radius: 8px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-image: url(./assets/bg7.jpeg);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   background-size: 100%;
 }
 
@@ -235,20 +231,16 @@ footer p {
 
 /* Estilo para cada elemento de servicio */
 .service-item {
-  background-color: aliceblue;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
+  border-radius: 8px;  
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
 }
 
 /* Estilo para el nombre del servicio */
 .service-item h3 {
   font-size: 30px;
   margin-bottom: 10px;
-  color:white;
 }
 
 /* Estilo para la descripción del servicio */
@@ -267,22 +259,34 @@ footer p {
   display: block;
 }
 
-/* Estilos para las tarjetas principales (las 3 primeras) */
+/* Estilos para las tarjetas principales (las 3 primeras)----------------*/
 .main-service {
   grid-row-end: span 2; /* Hace que las tarjetas principales ocupen dos filas */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-top: 75px;
 }
 
-.main-service img {
-  width: 150px; /* Ajusta el tamaño de la imagen según tus necesidades */
-  height: 150px;
+.main-service h3 {
+  position: absolute;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 0; /* Elimina el margen */
+  padding: 0; /* Elimina el relleno */
+  left: 0; /* Ajusta la posición izquierda */
+  right: 0; /* Ajusta la posición derecha */
+  padding: 8px;
+  text-align: center;
+  transform: translateY(-85px);
 }
 
 .main-service p {
   margin-bottom: 10px; /* Agrega espacio adicional después del párrafo */
 }
 /*
-
-
 
 
 /* Estilos para el botón */
@@ -350,7 +354,7 @@ footer p {
 }
 
 
-
+/*------------------------------------------------------------------------------------------------------------------*/
 /*seccion acerca*/
 /* Estilos para la sección acerca */
 .about-section {
@@ -385,15 +389,14 @@ footer p {
   }
 }
 
-
+/*------------------------------------------------------------------------------------------------------------------*/
 
 /* Estilos para el proceso */
 .process-section {
   max-width: 1200px;
   height: 500px;
   margin: 0 auto;
-  padding: 20px;
-  
+  padding: 20px;  
 }
 
 .process-section h2 {
@@ -408,11 +411,6 @@ footer p {
   margin-bottom: 30px;
 }
 
-.process-cards {
-  display: flex;
-  justify-content: space-between;
-}
-
 .process-card {
   text-align: center;
   max-width: 300px;
@@ -422,38 +420,74 @@ footer p {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.process-card img {
-  width: 300px;
-  height: 250px;
-  border-radius: 50%;
-  margin: 0 auto 10px;
-  display: block;
-}
-
 .process-card h3 {
   font-size: 20px;
-  margin-bottom: 10px;
-  color: #ffffff;
+  margin-bottom: 10px; 
 }
 
 .process-card p {
-  font-size: 14px;
-  color: #ffffff;
+  font-size: 14px;  
   margin-bottom: 0;
+}
+
+.process-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alinea verticalmente los elementos en el centro */
+  width: 100%;
+}
+
+/* Ajusta el ancho del carrusel al 50% */
+.process-container .carousel-root {
+  width: 45%;
+}
+
+/* Ajusta el ancho de la imagen al 50% */
+.process-container img {
+  width: 50%;
+  max-width: 100%;
 }
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
+  .process-section {
+    width: 100%; /* Cambiar el ancho máximo para ocupar el ancho completo */
+    height: auto; /* Ajustar la altura automáticamente según el contenido */
+    padding: -1px; /* Reducir el espacio de relleno */
+  }
+
   .process-cards {
     flex-direction: column;
+    width: 80px; /* Incrementa el ancho de las tarjetas en la vista de teléfono */
+    margin: 0 auto 20px;
   }
 
   .process-card {
-    max-width: 100%;
-    margin-bottom: 20px;
+    width: 100%; /* Utiliza el ancho completo de la pantalla */
+    margin: 0 auto 20px; /* Agrega espacio en la parte inferior de las tarjetas */
+    padding: 0 20px;
+    height: 290px;
   }
+
+  .laptop-image{
+    display: none;  
+  }
+  /* Ajusta el ancho del carrusel al 50% */
+.process-container .carousel-root {
+  width: 100%;
 }
 
+/* Ajusta el ancho de la imagen al 50% */
+.process-container img {
+  width: 0%;
+}
+
+
+
+}
+
+
+/*------------------------------------------------------------------------------------------------------------------*/
 
 /* Estilos para la sección del portafolio */
 .portfolio-section {
@@ -545,27 +579,59 @@ footer p {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+/*------------------------------------------------------------------------------------------------------------------*/
 
 
 /*face component*/
 
 /* Estilo base para las letras */
 
+#inicio{
+  padding-top: 100px;
+}
 
 .text-container-face {
   padding-top: 45px;
   font-size: 40px;
   text-align: left;  
   font-family: 'Forum', cursive;
-  width: 50%;}
+  width: 30%;
+  
+}
+
+.secondScrm{
+width: '50%'
+}
+
+.sectionFace{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 11px;
+  position: relative;
+}
 
 
 /* Estilo para letras más pequeñas en pantallas de teléfono */
 @media screen and (max-width: 768px) {
   .text-container-face {
     font-size: 30px;
-    margin:0;
-    width:130% ;    
+    margin: 0;
+    width: 100%; /* Cambiar a 100% para ocupar todo el ancho en dispositivos móviles */
+    text-align: center;  
   }
- 
+  .secondScrm{
+    width:0%;
+  }
+  
+  .sectionFace{
+    display:block;
+    background-color: white;
+  }
+
+  .imgFace{
+    width: 150px;
+  }
 }
+/*------------------------------------------------------------------------------------------------------------------*/

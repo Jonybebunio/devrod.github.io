@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import laptop from '../src/assets/laptop.png'
 import '../src/index.css';
 
  
@@ -149,31 +150,44 @@ function Process({ language }) {
     },
   };
 
+  const isMobile = window.innerWidth <= 768;
+
+  // Establece el número de diapositivas a mostrar
+  const slidesToShow = isMobile ? 1 : 3;
+
   return (
     <section className="process-section">
       <h2 className="titlecenter">{traducciones[language].title}</h2>
       <h4 className="titlecenter">{traducciones[language].subtitle}</h4>
-      <Carousel
-        showStatus={false}
-        showThumbs={false}
-        infiniteLoop={true}
-        showArrows={true}
-        centerMode={true}
-        centerSlidePercentage={33.33}
-        dynamicHeight={false}
-      >
-        {traducciones[language].cards.map((card, index) => (
-          <div key={index} className="process-card">   
+
+      <div className="process-container">
+        <Carousel
+          showStatus={false}
+          showThumbs={false}
+          infiniteLoop={true}
+          showArrows={true}
+          centerMode={true}
+          centerSlidePercentage={46} // 100% de la pantalla
+          dynamicHeight={false}
+          slidesToScroll={1}
+          slidesToShow={slidesToShow}
+          swipeScrollTolerance={5}
+        >
+          {traducciones[language].cards.map((card, index) => (
+            <div key={index} className="process-card">
+              <br />
+              <br />
+              <h3>{card.nombre}</h3>
+              <p>{card.descripcion}</p>
+              <br />
+              <br />
+            </div>
+          ))}
           <br/>
-          <br/>       
-            <h3>{card.nombre}</h3>
-            <p>{card.descripcion}</p>
-            <br/>
-            <br/>
-          </div>
-        ))}
-        
-      </Carousel>
+        </Carousel>
+        <img src={laptop} alt="" className="laptop-image" style={{width:"25%"}}/>
+      </div>
+      
     </section>
   );
 }

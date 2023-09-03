@@ -2,18 +2,40 @@ import React, { useState, useEffect } from 'react';
 import '../src/index.css';
 import { Link } from 'react-scroll';
 import ImgV from '../src/assets/bg1.mp4';
-import facebook from '../src/assets/fb.png';
-import gmail from '../src/assets/gmail.png';
-import whatsapp from '../src/assets/ws.png';
+import woman from '../src/assets/woman.png';
 
 function Face(props) {
   const { language } = props;
   const [typedText, setTypedText] = useState('');
 
+  const titleText = {
+    es: "Bienvenido a Devrod: Donde las Ideas Se Convierten en Éxito en Línea",
+    en: "Welcome to Devrod: Where Ideas Turn into Online Success At Devrod",
+    pl: "Witaj w Devrod: Gdzie Pomysły Przemieniają Się w Sukces"
+  };
+
   const originalText = {
-    es: "Bienvenido a Devrod: Donde las Ideas Se Convierten en Éxito en Línea En Devrod, somos los artesanos digitales que transforman tu visión en sitios y programas web que deslumbran. Ya sea que necesites una página web cautivadora o un programa web innovador, estamos aquí para hacer realidad tus ambiciones digitales.",
-    en: "Welcome to Devrod: Where Ideas Turn into Online Success At Devrod, we are the digital craftsmen who turn your vision into dazzling websites and web programs. Whether you need a captivating webpage or an innovative web program, we're here to bring your digital ambitions to life",
-    pl: "Witaj w Devrod: Gdzie Pomysły Przemieniają Się w Sukces Online W Devrodzie jesteśmy cyfrowymi rzemieślnikami, którzy zamieniają Twoją wizję w olśniewające strony internetowe i programy internetowe. Bez względu na to, czy potrzebujesz fascynującej strony internetowej, czy innowacyjnego programu internetowego, jesteśmy tutaj, aby ożywić Twoje cyfrowe ambicje."
+    es: "somos los artesanos digitales que transforman tu visión en sitios y programas web que deslumbran. ",
+    en: "we are the digital craftsmen who turn your vision into dazzling websites and web programs. ",
+    pl: "jesteśmy cyfrowymi rzemieślnikami, którzy zamieniają Twoją wizję w olśniewające strony internetowe i programy internetowe."
+  };
+
+  const sdnParagraph ={
+    es: "Ya sea que necesites una página web cautivadora o un programa web innovador, estamos aquí para hacer realidad tus ambiciones digitales.",
+    en:"Whether you need a captivating webpage or an innovative web program, we're here to bring your digital ambitions to life",
+    pl:"Bez względu na to, czy potrzebujesz fascynującej strony internetowej, czy innowacyjnego programu internetowego, jesteśmy tutaj, aby ożywić Twoje cyfrowe ambicje."
+  }
+
+  const subTitle = {
+    es: "Donde las Ideas Se Convierten en Éxito en Línea",
+    en: "Welcome to Devrod: Where Ideas Turn into Online Success At Devrod",
+    pl: "Gdzie Pomysły Przemieniają Się w Sukces"
+  };
+  const {  setShowContactForm } = props;
+
+  const handleContactLinkClick = () => {
+    setShowContactForm(true);
+    setShowMenu(false);
   };
 
   useEffect(() => {
@@ -21,6 +43,7 @@ function Face(props) {
     const typingInterval = setInterval(() => {
       if (index < originalText[language].length) {
         setTypedText(originalText[language].slice(0, index + 1));
+        
         index++;
       } else {
         clearInterval(typingInterval);
@@ -34,16 +57,10 @@ function Face(props) {
 
   return (
     <>
+    {/*------------------------------------------------------------------------*/}
       <section 
-        id="inicio"
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          height: '100vh',
-          padding: '11px',
-          position: 'relative',
-        }}
+        className='sectionFace'
+        id="inicio"        
       >
         <Link to="header" smooth={true} duration={500}></Link>
         <video
@@ -52,7 +69,7 @@ function Face(props) {
           muted
           style={{
             position: 'absolute',
-            top: 0,
+            top: 120,
             left: 0,
             width: '100%',
             height: '100%',
@@ -63,37 +80,40 @@ function Face(props) {
           <source src={ImgV} type="video/mp4" />
         </video>
         <div className="text-container-face">
+          <h1 style={{fontSize:"25px",}}>{titleText[language]}</h1>
           <p style={{fontSize:"25px",}}>{typedText}</p>
           <br/>
-          <a href="https://www.facebook.com/profile.php?id=100094913480501" target="_blank" rel="noopener noreferrer">
-            <img 
-              src={facebook} 
-              alt={language === 'es' ? "facebook de devrod source by Icons8" : language === 'en' ? "Devrod's Facebook source by Icons8" : "Devrod's Facebook źródło przez Icons8"}
-              style={{ width: '40px' }}
-            />
-          </a>   
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=devrod.developers@gmail.com" target="_blank" rel="noopener noreferrer">
-            <img 
-              src={gmail} 
-              alt={language === 'es' ? "gmail de devrod source by Icons8" : language === 'en' ? "Devrod's Gmail source by Icons8" : "Devrod's Gmail źródło przez Icons8"}
-              style={{ width: '40px' }}
-            />
-          </a>
-          <a href="https://wa.me/34644190529" target="_blank" rel="noopener noreferrer">
-            <img 
-              src={whatsapp} 
-              alt={language === 'es' ? "whatsapp de devrod source by Icons8" : language === 'en' ? "Devrod's Whatsapp source by Icons8" : "Devrod's Whatsapp źródło przez Icons8"}
-              style={{ width: '40px' }}
-            />
-          </a>       
+          <button onClick={handleContactLinkClick} style={{background:"#04414F", width:"189px", height:"60px",borderRadius:"16px",fontSize:"16px", color:"white"}}>Contact</button>
+
+          <br/>
+                 
         </div>
-        <div style={{ width: '50%' }}>
+        <div style={{ width: '50%' }} className='secondScrm'>
           {/* Right side of the screen */}
           {/* Add content here or leave it empty for now */}
         </div>
       </section>
+      {/*------------------------------------------------------------------------*/}
+      <section 
+        className='sectionFace'
+               
+      >
+        <div className="text-container-face">
+          <img src={woman} alt="" className='imgFace'/>                      
+        </div>  
+
+        <div className="text-container-face" >
+          <p style={{fontSize:"25px",}}>{sdnParagraph[language]}</p>  
+          <h1 style={{fontSize:"25px",}}>{subTitle[language]}</h1>                 
+        </div>  
+        
+        
+      </section>
+      {/*------------------------------------------------------------------------*/}          
     </>
   );
 }
 
 export default Face;
+
+

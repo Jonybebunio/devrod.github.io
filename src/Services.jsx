@@ -24,7 +24,7 @@ function Services(props) {
 
   const traducciones = {
     es: {
-      mainServices: 'SERVICIOS PRINCIPALES',
+      mainServices: 'SERVICIOS',
       additionalApps: 'INTEGRA LO QUE TU NEGOCIO NECESITA',
       showLess: 'Mostrar menos',
       showMore: 'Mostrar más',
@@ -375,42 +375,42 @@ function Services(props) {
     <section id="services" className="services-section">
       <Link to="services" smooth={true} duration={500}></Link>
 
-      <h2>{traducciones[language].stunningWebsites}</h2>
-
-      <h2>{traducciones[language].customWebApps}</h2>
-
-      <h2>{traducciones[language].seamlessUpdates}</h2>
-      <br/><br/><br/>
-
+      
       <h2 className="titlecenter" style={{color:"black"}}>{traducciones[language].mainServices}</h2>
       <br />
-      <br />
-
+      <br /><br />
+      <br />          
+       {/*----SERVICIOS------------------------------------------------------------------*/}     
       <ul className="services-list">
         {servicios.map((servicio, index) => (
           <li key={index} className={`service-item ${index < 3 ? 'main-service' : ''}`}>
-            <h3><strong>{servicio.nombre[language]}</strong></h3>
-            {/* ... (imagen del servicio) */}
+            <span>
+              <h3>
+                <strong>{servicio.nombre[language]}</strong>
+              </h3>
+            </span> <br/>   
+
+            
             {index < 3 && (
               <>
                 {index === 0 && (
-                  <h1 style={{ fontSize: '40px', color: 'white' }}>
-                    <s>Desde € 499.00</s><br/>
-                    Agosto desde € 399.00
+                  <h1 style={{ fontSize: '40px', }}>
+                    Desde € 499.00<br/>
+                    
                   </h1>
                 )}
                 {index === 1 && (
-                  <h1 style={{ fontSize: '40px', color: 'white' }}>
+                  <h1 style={{ fontSize: '40px', }}>
                     Desde € 899.00
                   </h1>
                 )}
                 {index === 2 && (
-                  <h1 style={{ fontSize: '40px', color: 'white' }}>
+                  <h1 style={{ fontSize: '40px', }}>
                     Desde € 999.00
                   </h1>
                 )}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <ul style={{ textAlign: 'left', listStyle: 'none', color: 'white', padding: 0, margin: 0 }}>
+                  <ul style={{ textAlign: 'left', padding: 0, margin: 0 }}>
                     {servicio.descripcion[language].map((item, i) => (
                       <li key={i}>{item}</li>
                     ))}
@@ -426,7 +426,7 @@ function Services(props) {
       <br />
       <br />
       <h3 className="titlecenter" style={{color:"black"}}>{traducciones[language].additionalApps}</h3>
-      <br />
+      
       <ul className="services-list">
         {visibleApps.map((servicio, index) => (
           <li key={index} className="service-item">

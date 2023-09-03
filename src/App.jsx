@@ -32,7 +32,7 @@ function App() {
         <Routes>
           <Route path="/" element={
             <>
-              <Face language={language} />
+              <Face language={language} showContactForm={showContactForm} setShowContactForm={setShowContactForm}/>
               <section style={{
                 //   backgroundImage: `url(${Img})`,
                 //   background: '#5f9ea0',
@@ -44,15 +44,16 @@ function App() {
               }}>
                 <Services language={language} />
               </section>
-              <section >
-                <Acerca language={language} />
-              </section>
-              <section style={{background: 'linear-gradient(to right, #0b3d94, #281541)',}} >
+              
+              <section  >
                 <Process language={language} />
               </section>
               <Portfolio language={language} />
               <section style={{background: 'linear-gradient(to right, #0b3d94, #281541)',}} >
                 <Contact showContactForm={showContactForm} setShowContactForm={setShowContactForm} language={language}/>
+              </section>
+              <section >
+                <Acerca language={language} />
               </section>
             </>
           } />
