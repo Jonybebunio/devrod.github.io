@@ -11,6 +11,7 @@ import Contact from '../src/Contact';
 import Footer from '../src/Footer';
 import Blog from '../src/Blog';
 import Layout from '../src/Layout';
+import Resenas from '../src/Resenas';
 
 import '../src/index.css';
 
@@ -60,6 +61,9 @@ function App() {
          
          <Route path="/blog" element={<Layout showContactForm={showContactForm} setShowContactForm={setShowContactForm} language={language} changeLanguage={changeLanguage} showAllLinks={false} />} />
         </Routes>
+        
+        
+        <Resenas/>
         <Footer />
       </div>
     </Router>

@@ -176,23 +176,23 @@ function Acerca({ language }) {
 
   return (
     <Element name="acerca">
-      <section id="acerca" className="about-section">
+      <section id="acerca" className="about-section" >
         <Link to="acerca" smooth={true} duration={500}></Link>
-        <div className="text-container" style={{ flex: '1', margin: '0 10px' }}>
+        <div className="text-container" style={{ flex: '1', margin: '0 10px', padding: 'auto', marginLeft: '100px' }}>
           <animated.h2 style={textAnimation}>{traducciones[language].title}</animated.h2>
           <br /><br />
           <animated.h3 style={textAnimation}>{traducciones[language].subtitle}</animated.h3>
-          <animated.p style={textAnimation}>{traducciones[language].paragraph}</animated.p>
+          <animated.p style={textAnimation}>{traducciones[language].paragraph}</animated.p><br/>
           <animated.h3 style={textAnimation}>{traducciones[language].subtitle01}</animated.h3>
-          <animated.p style={textAnimation}>{traducciones[language].paragraph01}</animated.p>
+          <animated.p style={textAnimation}>{traducciones[language].paragraph01}</animated.p><br/>
           <animated.h3 style={textAnimation}>{traducciones[language].subtitle02}</animated.h3>
-          <animated.p style={textAnimation}>{traducciones[language].paragraph02}</animated.p>
+          <animated.p style={textAnimation}>{traducciones[language].paragraph02}</animated.p><br/>
           <animated.h3 style={textAnimation}>{traducciones[language].subtitle03}</animated.h3>
-          <animated.p style={textAnimation}>{traducciones[language].paragraph03}</animated.p>
+          <animated.p style={textAnimation}>{traducciones[language].paragraph03}</animated.p><br/>
           <animated.h3 style={textAnimation}>{traducciones[language].subtitle04}</animated.h3>
-          <animated.p style={textAnimation}>{traducciones[language].paragraph04}</animated.p>
+          <animated.p style={textAnimation}>{traducciones[language].paragraph04}</animated.p><br/>
           <animated.h3 style={textAnimation}>{traducciones[language].subtitle05}</animated.h3>
-          <animated.p style={textAnimation}>{traducciones[language].paragraph05}</animated.p>
+          <animated.p style={textAnimation}>{traducciones[language].paragraph05}</animated.p><br/>
           <animated.h2 style={textAnimation}>{traducciones[language].additionalTitle}</animated.h2>
         </div>
         <div className="image-container" style={{ flex: '1', margin: '0 10px', textAlign: 'center' }}>

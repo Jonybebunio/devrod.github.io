@@ -71,7 +71,7 @@ function Services(props) {
           "Seguridad mejorada",
           "Ideal para proyectos pequeños y de bajo presupuesto",
           "Limitado a interacciones básicas",
-          "y actualización de contenido más técnica",
+          "Actualización de contenido más técnica",
         ],
         en: [
           "Fixed and preestablished content",
@@ -80,7 +80,8 @@ function Services(props) {
           "Easy to host and low maintenance",
           "Enhanced security",
           "Ideal for small and low-budget projects",
-          "Limited to basic interactions and more technical content updates",
+          "Limited to basic interactions",
+          "Technical content updates",
         ],
         pl: [
           "Zawartość ustalona i ustalona z góry",
@@ -89,7 +90,8 @@ function Services(props) {
           "Łatwe do hostowania i niskie utrzymanie",
           "Zwiększona ochrona",
           "Idealne dla małych i niskobudżetowych projektów",
-          "Ograniczone do podstawowych interakcji i bardziej technicznych aktualizacji treści",
+          "Ograniczone do podstawowych interakcji" ,
+          "Technicznych aktualizacji treści",
         ],
       },
       imagen: estatic,
@@ -102,98 +104,92 @@ function Services(props) {
       },
       descripcion: {
         es: [
-          "Contenido actualizable",
-          "Interacción con usuarios",
+          "Ideal para tiendas en linea",
+          "Catálogo de productos",
           "Utiliza base de datos",
+          "Carrito de compras",
+          "Soporte al cliente",
           "Personalización del contenido",
-          "Integración con servicios externos",
+          "Integración pasarela de pago",
           "Diseño adaptable (Responsive)",
-          "Actualización en tiempo real",
           "Funcionalidades avanzadas",
           "Mayor complejidad",
           "Escalabilidad",
         ],
         en: [
-          "Updatable content",
-          "Interaction with users",
+          "Ideal for online stores",
+          "Product catalog",
           "Uses a database",
-          "Content personalization",
-          "Integration with external services",
+          "Shopping cart",
+          "Customer support",
+          "Content customization",
+          "Payment gateway integration",
           "Responsive design",
-          "Real-time updates",
-          "Advanced functionalities",
+          "Advanced features",
           "Higher complexity",
-          "Scalability",
+          "Scalability"
         ],
         pl: [
-          "Zaktualizowalna zawartość",
-          "Interakcja z użytkownikami",
-          "Korzysta z bazy danych",
-          "Personalizacja treści",
-          "Integracja z usługami zewnętrznymi",
+          "Idealne dla sklepów internetowych",
+          "Katalog produktów",
+          "Używa bazy danych",
+          "Koszyk zakupowy",
+          "Wsparcie klienta",
+          "Dostosowanie treści",
+          "Integracja bramy płatności",
           "Projekt responsywny",
-          "Aktualizacje w czasie rzeczywistym",
           "Zaawansowane funkcje",
-          "Wyższa złożoność",
-          "Skalowalność",
-        ],
+          "Większa złożoność",
+          "Skalowalność"
+        ]
       },
       imagen: dinamic,
     },
     {
       nombre: {
-        es: 'TIENDA EN LÍNEA',
-        en: 'ONLINE STORE',
-        pl: 'SKLEP INTERNETOWY',
+        es: 'SOPORTE TECNICO',
+        en: 'IT SUPPORT ',
+        pl: 'WSPIERANIE IT',
       },
       descripcion: {
         es: [
-          "Catálogo de productos",
-          "Carrito de compras",
-          "Pasarela de pago segura",
-          "Gestión de inventario",
-          "Cuentas de usuario",
-          "Valoraciones y reseñas de productos",
-          "Proceso de compra sencillo",
-          "Seguimiento de pedidos",
-          "Seguridad y privacidad",
-          "Soporte al cliente",
-          "Diseño responsive",
-          "Promociones y descuentos",
-          "Funciones de búsqueda y filtrado",
-          "Informes y análisis.",
+          "Actualización de sitios web",
+          "Modificación de idioma",
+          "Integración de aplicaciones web",
+          "Sitios web responsivos",
+          "Optimización web",
+          "Migración web a Android y iOS",
+          "Creación de formularios",
+          "Conexión de redes sociales",
+          "Optimización de contenido",
+          "Migración de código de la página",
+          "Otros"
         ],
         en: [
-          "Product catalog",
-          "Shopping cart",
-          "Secure payment gateway",
-          "Inventory management",
-          "User accounts",
-          "Product ratings and reviews",
-          "Simple checkout process",
-          "Order tracking",
-          "Security and privacy",
-          "Customer support",
-          "Responsive design",
-          "Promotions and discounts",
-          "Search and filtering functionalities",
-          "Reports and analytics",
+          "Website updates",
+          "Language modification",
+          "Web application integration",
+          "Responsive websites",
+          "Website optimization",
+          "Web migration to Android and iOS",
+          "Form creation",
+          "Social media integration",
+          "Content optimization",
+          "Page code migration",
+          "Others"
         ],
         pl: [
-          "Katalog produktów",
-          "Koszyk",
-          "Bezpieczna brama płatności",
-          "Zarządzanie stanem magazynowym",
-          "Konta użytkowników",
-          "Oceny i recenzje produktów",
-          "Prosty proces zakupów",
-          "Śledzenie zamówień",
-          "Bezpieczeństwo i prywatność",
-          "Wsparcie dla klientów",
-          "Projekt responsywny",
-          "Promocje i zniżki",
-          "Funkcje wyszukiwania i filtrowania",
-          "Raporty i analizy",
+          "Aktualizacja stron internetowych",
+          "Modyfikacja języka",
+          "Integracja aplikacji internetowych",
+          "Responsywne strony internetowe",
+          "Optymalizacja stron internetowych",
+          "Migracja stron internetowych na Androida i iOS",
+          "Tworzenie formularzy",
+          "Integracja mediów społecznościowych",
+          "Optymalizacja treści",
+          "Migracja kodu strony",
+          "Inne"
         ],
       },
       imagen: ecommerce,
@@ -383,9 +379,18 @@ function Services(props) {
        {/*----SERVICIOS------------------------------------------------------------------*/}     
       <ul className="services-list">
         {servicios.map((servicio, index) => (
-          <li key={index} className={`service-item ${index < 3 ? 'main-service' : ''}`}>
-            <span>
-              <h3>
+          <li 
+            key={index} 
+            className={`service-item ${index < 3 ? 'main-service' : ''}`}
+            
+          >
+            <span >
+              <h3 
+                style={{
+                  background: index === 0 ? '#ffffff' : index === 1 ? '#193152':'#EDF3FB',  
+                  color: index === 1 ? 'white' : 'black',
+                }}
+              >
                 <strong>{servicio.nombre[language]}</strong>
               </h3>
             </span> <br/>   
@@ -406,7 +411,7 @@ function Services(props) {
                 )}
                 {index === 2 && (
                   <h1 style={{ fontSize: '40px', }}>
-                    Desde € 999.00
+                    Desde € 250.00 Mensual
                   </h1>
                 )}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -426,8 +431,8 @@ function Services(props) {
       <br />
       <br />
       <h3 className="titlecenter" style={{color:"black"}}>{traducciones[language].additionalApps}</h3>
-      
-      <ul className="services-list">
+      {/* Other services------------------------------------------------------------------------------------------*/}
+      <ul className="services-list" style={{display: 'none'}}>
         {visibleApps.map((servicio, index) => (
           <li key={index} className="service-item">
             <h3>{servicio.nombre[language]}</h3>
@@ -437,7 +442,7 @@ function Services(props) {
         ))}
       </ul>
 
-      <div className="button-container">
+      <div className="button-container" style={{display: 'none'}}>
         {aplicacionesAdicionales.length > initialAppsToShow && (
           <button className="show-more-button" onClick={handleToggleShowApps}>
             {showAllApps ? traducciones[language].showLess : traducciones[language].showMore}

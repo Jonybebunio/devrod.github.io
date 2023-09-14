@@ -3,6 +3,7 @@ import '../src/index.css';
 import { Link } from 'react-scroll';
 import ImgV from '../src/assets/bg1.mp4';
 import woman from '../src/assets/woman.png';
+import homepage from '../src/assets/homepage.png'
 
 function Face(props) {
   const { language } = props;
@@ -10,7 +11,7 @@ function Face(props) {
 
   const titleText = {
     es: "Bienvenido a Devrod: Donde las Ideas Se Convierten en Éxito en Línea",
-    en: "Welcome to Devrod: Where Ideas Turn into Online Success At Devrod",
+    en: "Welcome to Devrod: Where Ideas Turn into Online Success",
     pl: "Witaj w Devrod: Gdzie Pomysły Przemieniają Się w Sukces"
   };
 
@@ -62,23 +63,9 @@ function Face(props) {
         className='sectionFace'
         id="inicio"        
       >
+        
         <Link to="header" smooth={true} duration={500}></Link>
-        <video
-          autoPlay
-          loop
-          muted
-          style={{
-            position: 'absolute',
-            top: 120,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            zIndex: -1,
-          }}
-        >
-          <source src={ImgV} type="video/mp4" />
-        </video>
+     
         <div className="text-container-face">
           <h1 style={{fontSize:"25px",}}>{titleText[language]}</h1>
           <p style={{fontSize:"25px",}}>{typedText}</p>
@@ -89,6 +76,7 @@ function Face(props) {
                  
         </div>
         <div style={{ width: '50%' }} className='secondScrm'>
+          <img src={homepage} className='principalLogo' alt="" width={"90%"}/>
           {/* Right side of the screen */}
           {/* Add content here or leave it empty for now */}
         </div>
@@ -98,7 +86,7 @@ function Face(props) {
         className='sectionFace'
                
       >
-        <div className="text-container-face">
+        <div className="text-container-face-logo">
           <img src={woman} alt="" className='imgFace'/>                      
         </div>  
 

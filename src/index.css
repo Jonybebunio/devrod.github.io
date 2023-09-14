@@ -1,12 +1,10 @@
-/* styles.css */
-
-
 /* Estilos generales */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Josefin Slab', serif;
+  font-size: 20px;
   
 }
 
@@ -595,8 +593,14 @@ footer p {
   font-size: 40px;
   text-align: left;  
   font-family: 'Forum', cursive;
-  width: 30%;
-  
+  width: 30%;  
+}
+.text-container-face-logo {
+  padding-top: 45px;
+  padding-right: 305px;
+  font-size: 40px;
+  font-family: 'Forum', cursive;
+   
 }
 
 .secondScrm{
@@ -606,12 +610,10 @@ width: '50%'
 .sectionFace{
   display: flex;
   align-items: center;
-  justify-content: center;
-  
+  justify-content: center;  
   padding: 11px;
   position: relative;
 }
-
 
 /* Estilo para letras más pequeñas en pantallas de teléfono */
 @media screen and (max-width: 768px) {
@@ -632,6 +634,10 @@ width: '50%'
 
   .imgFace{
     width: 150px;
+  }
+
+  .principalLogo{
+    display: none;
   }
 }
 /*------------------------------------------------------------------------------------------------------------------*/
