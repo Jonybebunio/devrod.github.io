@@ -23,6 +23,11 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+        window.location.replace('/'); // Redirect to the root
+      }
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
