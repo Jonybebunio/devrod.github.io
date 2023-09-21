@@ -95,6 +95,11 @@ function Services(props) {
         ],
       },
       imagen: estatic,
+      precio: {
+        es: 'Desde € 499.00',
+        en: 'From € 499.00',
+        pl: 'Od 499,00 €',
+      },
     },
     {
       nombre: {
@@ -144,10 +149,15 @@ function Services(props) {
         ]
       },
       imagen: dinamic,
+      precio: {
+        es: 'Desde € 899.00',
+        en: 'From € 899.00',
+        pl: 'Od 899,00 €',
+      },
     },
     {
       nombre: {
-        es: 'SOPORTE TECNICO',
+        es: 'SOPORTE TÉCNICO',
         en: 'IT SUPPORT ',
         pl: 'WSPIERANIE IT',
       },
@@ -193,6 +203,11 @@ function Services(props) {
         ],
       },
       imagen: ecommerce,
+      precio: {
+        es: 'Desde € 250.00 Mensual',
+        en: 'From € 250.00 Monthly',
+        pl: 'Od 250,00 € miesięcznie',
+      },
     },
     // Resto de los servicios en el mismo formato...
   ];
@@ -369,63 +384,59 @@ function Services(props) {
 
   return (
     <section id="services" className="services-section">
-      <Link to="services" smooth={true} duration={500}></Link>
-
-      
-      <h2 className="titlecenter" style={{color:"black"}}>{traducciones[language].mainServices}</h2>
+      <Link to="services" smooth={true} duration={500}></Link>{/*CONCETING WITH HEADER*/}      
+      <h2 className="titlecenter" style={{color:"black"}}>{traducciones[language].mainServices}</h2> {/*TITLE*/}    
       <br />
       <br /><br />
       <br />          
        {/*----SERVICIOS------------------------------------------------------------------*/}     
-      <ul className="services-list">
-        {servicios.map((servicio, index) => (
-          <li 
-            key={index} 
-            className={`service-item ${index < 3 ? 'main-service' : ''}`}
-            
-          >
-            <span >
-              <h3 
-                style={{
-                  background: index === 0 ? '#ffffff' : index === 1 ? '#193152':'#EDF3FB',  
-                  color: index === 1 ? 'white' : 'black',
-                }}
-              >
-                <strong>{servicio.nombre[language]}</strong>
-              </h3>
-            </span> <br/>   
+       <ul className="services-list">{/*3 PRINCIPAL CARDS*/}
+  {servicios.map((servicio, index) => (
+    <li 
+      key={index} 
+      className={`service-item ${index < 3 ? 'main-service' : ''}`}            
+    >
+      <span >
+        <h3 
+          style={{
+            background: index === 0 ? '#ffffff' : index === 1 ? '#193152':'#EDF3FB',  
+            color: index === 1 ? 'white' : 'black',
+          }}
+        >
+          <strong>{servicio.nombre[language]}</strong>
+        </h3>
+      </span> <br/>      {/*SERVICES CARDS*/}         
+      {index < 3 && (
+        <>
+          {index === 0 && (
+            <h1 style={{ fontSize: '40px', }}>
+              {servicio.precio[language]}<br/>                    
+            </h1>
+          )}
+          {index === 1 && (
+            <h1 style={{ fontSize: '40px', }}>
+              {servicio.precio[language]}
+            </h1>
+          )}
+          {index === 2 && (
+            <h1 style={{ fontSize: '40px', }}>
+              {servicio.precio[language]}
+            </h1>
+          )}
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <ul style={{ textAlign: 'left', padding: 0, margin: 0 }}>
+              {servicio.descripcion[language].map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </>
+      )}
+    </li>
+  ))}
+</ul>
 
-            
-            {index < 3 && (
-              <>
-                {index === 0 && (
-                  <h1 style={{ fontSize: '40px', }}>
-                    Desde € 499.00<br/>
-                    
-                  </h1>
-                )}
-                {index === 1 && (
-                  <h1 style={{ fontSize: '40px', }}>
-                    Desde € 899.00
-                  </h1>
-                )}
-                {index === 2 && (
-                  <h1 style={{ fontSize: '40px', }}>
-                    Desde € 250.00 Mensual
-                  </h1>
-                )}
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <ul style={{ textAlign: 'left', padding: 0, margin: 0 }}>
-                    {servicio.descripcion[language].map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              </>
-            )}
-          </li>
-        ))}
-      </ul>
+
 
       <br />
       <br />

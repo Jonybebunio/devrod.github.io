@@ -134,31 +134,24 @@ function Contact({ language, changeLanguage, showContactForm, setShowContactForm
             
           }}
         >
-          <h2 className="titlecenter">{traducciones[language].title}</h2>
+          <h2 className="titlecenter" style={{color:'white'}}>{traducciones[language].title} </h2>
           <Link to="contact" smooth={true} duration={500}></Link>
-          <form style={{ background: '#04414F', padding: '60px', borderRadius:"16px" }}>
-            <label> 
-              {traducciones[language].nameLabel}
+          <form style={{ background: '#04414F', padding: '60px', borderRadius:"16px", color:'white' }}>
+            <label style={{color:'white'}}> 
+              {traducciones[language].nameLabel}<br/>
               <input type="text" name="name" required onChange={handleChange} />
             </label>
             <br />
             <label>
-              {traducciones[language].phoneLabel}
+              {traducciones[language].phoneLabel}<br/>
               <input type="tel" name="phone" required onChange={handleChange} />
             </label>
             <br />
             <label>
-              {traducciones[language].messageLabel}
+              {traducciones[language].messageLabel}<br/>
               <textarea name="message" required onChange={handleChange}></textarea>
             </label>
             <br />
-            <button type="submit" onClick={handleFacebookSubmit} style={buttonStyle}>
-              <img
-                src={facebook}
-                alt="facebook de devrod source by Icons8"
-                style={{ width: '50px', marginRight: '10px' }}
-              />
-            </button>
             <button type="submit" onClick={handleGmailSubmit} style={buttonStyle}>
               <img
                 src={gmail}

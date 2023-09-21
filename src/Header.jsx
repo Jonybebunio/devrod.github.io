@@ -55,7 +55,7 @@ function Header(props) {
         <div className={`navbar-center ${showMenu ? 'active' : ''}`}>
           
           <ul className="menu">
-            {location.pathname === '/blog' ? (
+            {location.pathname === '/blog' || location.pathname === '/products' ? (
               <li>
                 <a onClick={handleHomeClick}>
                   {language === 'es' && 'Inicio'}
@@ -71,6 +71,13 @@ function Header(props) {
                     {language === 'en' && 'Home'}
                     {language === 'pl' && 'Strona główna'}
                   </Link>
+                </li>
+                <li>
+                  <NavLink to="/products" onClick={handleLinkClick}> 
+                    {language === 'es' && 'Productos'}
+                    {language === 'en' && 'Products'}
+                    {language === 'pl' && 'Blog'}
+                  </NavLink>
                 </li>
                 <li>
                   <Link to="services" smooth={true} duration={500} onClick={handleLinkClick}>
@@ -100,6 +107,7 @@ function Header(props) {
                     {language === 'pl' && 'Blog'}
                   </NavLink>
                 </li>
+                
               </>
             )}
           </ul>          
@@ -125,7 +133,8 @@ function Header(props) {
             src={pl} 
             alt="Logo" 
             onClick={() => changeLanguage('pl')}
-            style={{width:'30px'}}
+            style={{width:'30px', display: 'none'}}
+            
           />
         
       </div>

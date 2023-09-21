@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from '../src/Header';
 import Face from '../src/Face';
@@ -12,6 +12,7 @@ import Footer from '../src/Footer';
 import Blog from '../src/Blog';
 import Layout from '../src/Layout';
 import Resenas from '../src/Resenas';
+import Products from '../src/Products';
 
 import '../src/index.css';
 
@@ -59,9 +60,10 @@ function App() {
             </>
           } />
          
-         <Route path="/blog" element={<Layout showContactForm={showContactForm} setShowContactForm={setShowContactForm} language={language} changeLanguage={changeLanguage} showAllLinks={false} />} />
+          <Route path="/blog/*" element={<Layout showContactForm={showContactForm} setShowContactForm={setShowContactForm} language={language} changeLanguage={changeLanguage} showAllLinks={false} />} />        
+          <Route path ="/products/*" element={<Products language={language} changeLanguage={changeLanguage}/>}></Route>
         </Routes>
-        
+         
         
         <Resenas/>
         <Footer />

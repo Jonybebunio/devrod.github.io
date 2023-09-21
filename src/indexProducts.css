@@ -1,0 +1,150 @@
+/* Products.css */
+
+.title {
+  font-size: 44px;
+  text-align: center;
+  margin-top: 20px;
+}
+/*-------------------------------------*/
+.static-products-start{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+
+.static-products-start img {
+  max-width: 600px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.static-products-info-start{
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+/*-------------------------------------------------------------*/
+.section{
+  height:auto;
+}
+.static-products, .dynamic-products {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+  
+}
+
+.static-products img , .dynamic-products img {
+  max-width: 500px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.static-products-info, .dynamic-products-info {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+.button {
+  background-color: #04414F;
+  color: #fff;
+  border-radius: 16px ;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  
+}
+/*tyle={{background:"", width:"189px", height:"60px",borderRadius:"16px",fontSize:"16px", color:"white"}}*/
+.dynamic-title {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dynamic-title p {
+  font-size: 16px;
+  margin: 5px;
+}
+
+
+/* Agrega un media query para hacer el componente responsivo */
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px; /* Cambia el tamaño de la fuente para pantallas más pequeñas */
+  }
+
+  .static-products,
+  .dynamic-products {
+    flex-direction: column; /* Cambia la dirección de flex a columna en pantallas más pequeñas */
+    align-items: center;
+    justify-content: center;
+    margin: 20px; /* Ajusta el margen */
+  }
+
+  .static-products-start img,
+  .static-products img,
+  .dynamic-products img {
+    max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+    margin-right: 0; /* Elimina el margen derecho */
+  }
+
+  .static-products-info,
+  .dynamic-products-info {
+    max-width: 100%; /* Ajusta el ancho máximo */
+    text-align: center; /* Centra el contenido */
+    display: flex;
+    flex-direction: row;
+  }
+
+  .button {
+    margin: 5px; /* Ajusta el margen de los botones */
+  }
+
+  .dynamic-title {
+    font-size: 20px; /* Cambia el tamaño de la fuente para pantallas más pequeñas */
+  }
+}
+
+
+/*-----------------------------------------*/
+.program-cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se ajusten automáticamente */
+  justify-content:center; /* Distribuye las tarjetas horizontalmente */
+  gap: 20px; /* Espacio entre las tarjetas */
+  margin: 15px 50px 15px 50px;
+}
+
+.program-card {
+  flex-basis: calc(30% - 20px); /* Controla el ancho de las tarjetas en la vista normal */
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  max-width: 100%; /* Las tarjetas ocuparán todo el ancho en pantallas pequeñas */
+}
+
+.program-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .program-cards-container {
+    flex-direction: column; /* Cambia a una disposición de columna en pantallas pequeñas */
+  }
+
+  .program-card {
+    flex-basis: 100%; /* Las tarjetas ocuparán todo el ancho en pantallas pequeñas */
+  }
+}
