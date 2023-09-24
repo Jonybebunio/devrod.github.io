@@ -147,4 +147,10 @@
   .program-card {
     flex-basis: 100%; /* Las tarjetas ocuparán todo el ancho en pantallas pequeñas */
   }
+
+  .static-products-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
 }

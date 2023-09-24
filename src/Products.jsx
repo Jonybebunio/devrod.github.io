@@ -168,20 +168,21 @@ function Products({ language, changeLanguage }) {
           {translations[language].staticTitle}
         </h1>
         <div className="static-products">
-          <img src={selectedImage} alt="" />
-          <div className="static-products-info">
-            <button className="button" onClick={() => handleButtonClick(coffe)}>
-              {translations[language].coffe}
-            </button>
-            <button className="button" onClick={() => handleButtonClick(restaurant)}>
-              {translations[language].restaurant}
-            </button>
-            <button className="button" onClick={() => handleButtonClick(menu)}>
-              {translations[language].menu}
-            </button>
-          </div>
-        </div>
+  <img src={selectedImage} alt="" />
+  <div className="static-products-info static-products-info-start">
+    <button className="button" onClick={() => handleButtonClick(coffe)}>
+      {translations[language].coffe}
+    </button>
+    <button className="button" onClick={() => handleButtonClick(restaurant)}>
+      {translations[language].restaurant}
+    </button>
+    <button className="button" onClick={() => handleButtonClick(menu)}>
+      {translations[language].menu}
+    </button>
+  </div>
+</div>
       </div>
+      
       {/*-------------------------------------------------------------------------------------------*/}
       <div className='section'>
         <h1 className="title">

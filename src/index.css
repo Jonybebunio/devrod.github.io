@@ -357,13 +357,22 @@ footer p {
 /* Estilos para la sección acerca */
 .about-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  width: 60%;
+  margin: 250px;
+  background-image: url("./assets/Logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+ 
+  
+
 }
 
 .image-container {
   flex: 1;
   text-align: right;
+  display: none;
 }
 
 .text-container {
@@ -375,6 +384,8 @@ footer p {
 @media screen and (max-width: 768px) {
   .about-section {
     flex-direction: column;
+    margin: 35px 35px;
+    width: 100%;
   }
 
   .text-container {
@@ -384,6 +395,7 @@ footer p {
   .image-container {
     order: 2;
     width: 80%;
+    display: block;
   }
 }
 
@@ -641,6 +653,73 @@ width: '50%'
   }
 }
 /*------------------------------------------------------------------------------------------------------------------*/
+/* Estilo base para el navbar */
+.phoneUI{
+  display: none;
+}  /*ocultar el menu en pantallas grandes*/
+
+.navbarUI {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente los elementos */
+  align-items: center; /* Centra verticalmente los elementos si es necesario */
+  position: fixed; /* Hace que la barra de navegación sea fija */
+  bottom: 0; /* Coloca la barra de navegación en la parte superior de la ventana */
+  width: 100%; /* Ocupa el ancho completo de la ventana */
+  background-color: #fff; /* Cambia el color de fondo según tus preferencias */
+  z-index: 1000; /* Ajusta el z-index según sea necesario para que esté por encima de otros elementos */
+}
 
 
+.navbarUI ul {
+  list-style: none;
+  display: flex; /* Hace que los elementos de la lista sean flexibles */
+  margin: 0;
+  padding: 0 ;
+}
 
+.navbarUI li {
+  margin: 0 30px; /* Espacio entre elementos */
+  
+}
+
+
+/* Estilo para el botón activo */
+.navbarUI ul li a.active {
+  position: relative; /* Asegura que el enlace activo esté posicionado relativo */
+
+  /* Establece un fondo circular como una luna */
+  background: #ffffff; /* Color de fondo para el botón activo (puedes ajustarlo según tus preferencias) */
+  border-radius: 50%; /* Hace que el fondo sea circular */
+  width: 35px; /* Ancho del fondo circular, debe coincidir con el ancho de las imágenes */
+  height: 35px; /* Altura del fondo circular, debe coincidir con la altura de las imágenes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Coloca el enlace activo sobre otros elementos */
+
+  /* Puedes ajustar la posición y el tamaño de la luna según tus necesidades */
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ulUI{
+  background-color: rgb(4, 65, 79);
+  border-radius: 35px;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .hamburger{
+    display: none;
+  }
+  .footerUI{
+    display: none;
+  }
+
+  .phoneUI{
+    display: block;
+  } /*hace visible el menu*/
+  
+}

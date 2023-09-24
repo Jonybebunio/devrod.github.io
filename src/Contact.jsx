@@ -21,19 +21,7 @@ function Contact({ language, changeLanguage, showContactForm, setShowContactForm
     });
   };
 
-  const handleFacebookSubmit = (event) => {
-    event.preventDefault();
-    const { name, phone, message } = formData;
-    const facebookMessage = `¡Hola! Soy ${name}. Mi teléfono es ${phone}. Mi mensaje es: ${message}`;
-    const pageID = '100094913480501';
-    const facebookUrl = `fb-messenger://share/?link=https://www.facebook.com/messages/t/${pageID}?text=${encodeURIComponent(
-      facebookMessage
-    )}`;
-    const messengerWindow = window.open(facebookUrl, '_blank');
-    if (!messengerWindow) {
-      alert('Error: Unable to open Facebook Messenger. Please make sure your browser allows pop-ups.');
-    }
-  };
+  {/*----Enviar mensaje por Gmail-------------------------------*/}
 
   const handleGmailSubmit = (event) => {
     event.preventDefault();
@@ -46,6 +34,7 @@ function Contact({ language, changeLanguage, showContactForm, setShowContactForm
     window.open(gmailUrl, '_blank');
   };
 
+  {/*----Enviar mensaje por Whatsapp-------------------------------*/}
   const handleWhatsAppSubmit = (event) => {
     event.preventDefault();
     const { name, message, phone } = formData;
@@ -57,6 +46,7 @@ function Contact({ language, changeLanguage, showContactForm, setShowContactForm
     window.open(whatsappUrl, '_blank');
   };
 
+  {/*----stilos del boton del los mensajes-------------------------------*/}
   const buttonStyle = {
     background: 'transparent',
     border: 'none',
@@ -66,10 +56,12 @@ function Contact({ language, changeLanguage, showContactForm, setShowContactForm
     margin: '5px'
   };
 
+    {/*----manejo del boton de contacto-------------------------------*/}
   const toggleContact = () => {
     setShowContactForm(!showContactForm);
   };
 
+    {/*----Traducciones-------------------------------*/}
   const traducciones = {
     es: {
       buttonText: 'Contacto',
@@ -97,28 +89,25 @@ function Contact({ language, changeLanguage, showContactForm, setShowContactForm
   return (
     <>
       <button
-  style={{
-    position: 'fixed',
-    bottom: '40px',
-    right: '40px',
-    zIndex: '9999',
-    height: '40px',
-    fontSize: '30px',
-    background: 'transparent',  // Elimina el fondo del botón
-    border: 'none',            // Elimina el borde del botón
-    cursor: 'pointer',
-    padding: '0',              // Elimina el espacio interior del botón
-  }}
-  onClick={toggleContact}
->
-  <img
-    src={att}// Reemplaza "ruta-a-tu-imagen.png" con la ruta correcta de tu imagen
-    alt="Contact"
-    style={{ width: '40px', height: '40px' }}  // Ajusta el tamaño de la imagen según tus necesidades
-  />
-</button>
+        style={{
+          position: 'fixed',        bottom: '90px',
+          right: '40px',            zIndex: '9999',
+          height: '40px',           fontSize: '30px',
+          background: 'transparent',// Elimina el fondo del botón
+          border: 'none',           // Elimina el borde del botón
+          cursor: 'pointer',
+          padding: '0',             // Elimina el espacio interior del botón
+        }}
+        onClick={toggleContact}
+      >
+        <img
+          src={att}// Reemplaza "ruta-a-tu-imagen.png" con la ruta correcta de tu imagen
+          alt="Contact"
+          style={{ width: '40px', height: '40px' }}  // Ajusta el tamaño de la imagen según tus necesidades
+        />
+      </button>
 
-
+      {/*----Control de Pop-Up-------------------------------*/}
       {showContactForm && (
         <section
           className="titlecenter"
@@ -130,28 +119,30 @@ function Contact({ language, changeLanguage, showContactForm, setShowContactForm
             transform: 'translate(-50%, -50%)',
             zIndex: '9999',
             background: "#04414F",
-            borderRadius:"16px"
-            
+            borderRadius:"16px"            
           }}
         >
-          <h2 className="titlecenter" style={{color:'white'}}>{traducciones[language].title} </h2>
           <Link to="contact" smooth={true} duration={500}></Link>
+          <h2 className="titlecenter" style={{color:'white'}}>{traducciones[language].title} </h2>
           <form style={{ background: '#04414F', padding: '60px', borderRadius:"16px", color:'white' }}>
             <label style={{color:'white'}}> 
               {traducciones[language].nameLabel}<br/>
               <input type="text" name="name" required onChange={handleChange} />
             </label>
             <br />
+            
             <label>
               {traducciones[language].phoneLabel}<br/>
               <input type="tel" name="phone" required onChange={handleChange} />
             </label>
             <br />
+
             <label>
               {traducciones[language].messageLabel}<br/>
               <textarea name="message" required onChange={handleChange}></textarea>
             </label>
             <br />
+
             <button type="submit" onClick={handleGmailSubmit} style={buttonStyle}>
               <img
                 src={gmail}
@@ -159,6 +150,7 @@ function Contact({ language, changeLanguage, showContactForm, setShowContactForm
                 style={{ width: '50px', marginRight: '10px' }}
               />
             </button>
+            
             <button type="submit" onClick={handleWhatsAppSubmit} style={buttonStyle}>
               <img
                 src={whatsapp}

@@ -13,6 +13,7 @@ import Blog from '../src/Blog';
 import Layout from '../src/Layout';
 import Resenas from '../src/Resenas';
 import Products from '../src/Products';
+import NavPhone from '../src/NavPhone';
 
 import '../src/index.css';
 
@@ -57,16 +58,46 @@ function App() {
               <section >
                 <Acerca language={language} />
               </section>
-            </>
-          } />
+           </>
+          }/>
          
-          <Route path="/blog/*" element={<Layout showContactForm={showContactForm} setShowContactForm={setShowContactForm} language={language} changeLanguage={changeLanguage} showAllLinks={false} />} />        
-          <Route path ="/products/*" element={<Products language={language} changeLanguage={changeLanguage}/>}></Route>
+          <Route 
+            path="/blog/*" 
+            element={
+            <>
+              <Layout showContactForm={showContactForm} setShowContactForm={setShowContactForm} language={language} changeLanguage={changeLanguage} showAllLinks={false} />
+              <Contact showContactForm={showContactForm} setShowContactForm={setShowContactForm} language={language}/>
+            </>            
+            } 
+          />        
+          <Route 
+            path ="/products/*" 
+            element={
+              <>
+                <Products language={language} changeLanguage={changeLanguage}/>
+                <Contact showContactForm={showContactForm} setShowContactForm={setShowContactForm} language={language}/>
+              </>
+            }
+          />
         </Routes>
          
         
         <Resenas/>
-        <Footer />
+        
+        
+        <section className='footerUI'>
+          <Footer />
+        </section>
+        <section className='phoneUI'>
+          <NavPhone 
+            language={language}
+            changeLanguage={setLanguage}
+            showContactForm={showContactForm}
+            setShowContactForm={setShowContactForm} 
+          />
+        </section>
+        
+        
       </div>
     </Router>
   );

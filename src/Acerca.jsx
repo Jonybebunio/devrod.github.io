@@ -178,9 +178,9 @@ function Acerca({ language }) {
     <Element name="acerca">
       <section id="acerca" className="about-section" >
         <Link to="acerca" smooth={true} duration={500}></Link>
-        <div className="text-container" style={{ flex: '1', margin: '0 10px', padding: 'auto', marginLeft: '100px' }}>
+        <div className="text-container" >
           <animated.h2 style={textAnimation}>{traducciones[language].title}</animated.h2>
-          <br /><br />
+          <br />
           <animated.h3 style={textAnimation}>{traducciones[language].subtitle}</animated.h3>
           <animated.p style={textAnimation}>{traducciones[language].paragraph}</animated.p><br/>
           <animated.h3 style={textAnimation}>{traducciones[language].subtitle01}</animated.h3>
